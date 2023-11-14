@@ -48,23 +48,25 @@ export const Exhibitors = () => {
 
 	return (
 		<div className="flex flex-col items-center text-center mt-20 gap-10">
-			<div className="text-4xl text-black">
+			<div className="text-8xl text-black font-medium font-garamond italic">
 				Wystawcy
 			</div>
-			<div className="grid grid-cols-3 gap-10">
+			<div className="flex flex-col gap-10">
 				{ exhibitors.map(({ name, description, image }) =>
-					<div className="flex flex-col gap-3 h-[350px] justify-between shadow-xl">
-						<div className="text-2xl text-black px-10 pt-6">
-							{ name }
+					<div className="flex gap-3 h-[350px] justify-between shadow-xl rounded odd:flex-row-reverse overflow-hidden">
+						<div className="w-3/5">
+							<div className="text-2xl text-black px-10 pt-6">
+								{ name }
+							</div>
+							<div className="text-sm text-black px-10">
+								{ description }
+							</div>
 						</div>
-						<div className="text-sm text-black px-10">
-							{ description }
-						</div>
-						<div className="h-40 w-full">
+						<div className="h-full w-2/5">
 							<img
 								src={ image }
 								alt="single-exhibitor-image"
-								className="h-full w-full object-cover rounded-bl rounded-br"
+								className="h-full w-full object-cover"
 							/>
 						</div>
 					</div>

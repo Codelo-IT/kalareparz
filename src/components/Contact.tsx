@@ -14,7 +14,7 @@ export const Contact = () => {
 	const [ isSidebarOpen, toggleSidebarOpen ] = useState(true);
 	
 	return (
-		<div className="relative mt-20 h-[800px] shadow-xl overflow-hidden">
+		<div className="relative mt-20 h-[400px] shadow-xl overflow-hidden">
 			<div
 				className="absolute top-0 w-[400px] h-full flex flex-col gap-10 z-20 bg-white p-5 transition-all"
 				style={ { left: isSidebarOpen ? 0 : -400 } }

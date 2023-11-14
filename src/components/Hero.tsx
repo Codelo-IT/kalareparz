@@ -14,7 +14,7 @@ export const Hero = () => {
 
 	return (
 		<Swiper
-			className="h-screen w-full !pt-[100px]"
+			className="h-[60vh] w-full !pt-[100px]"
 			effect="fade"
 			onSlideChange={() => console.log('slide change')}
 			modules={ [ Navigation, Pagination, A11y, EffectFade, Autoplay ] }
