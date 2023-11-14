@@ -1,6 +1,6 @@
 import { Header } from "components/Header";
 import { Hero } from "components/Hero";
-import { Content } from "components/Content";
+import { ContentWrapper } from "components/ContentWrapper";
 import { Exhibitors } from "components/Exhibitors";
 import { Contact } from "components/Contact";
 import { Footer } from "components/Footer";
@@ -11,10 +11,10 @@ function App() {
 		<div>
 			<Header/>
 			<Hero/>
-			<Content>
+			<ContentWrapper>
 				<Exhibitors/>
 				<Contact/>
-			</Content>
+			</ContentWrapper>
 			<Footer/>
 		</div>
 	);

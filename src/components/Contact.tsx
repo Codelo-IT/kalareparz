@@ -1,4 +1,3 @@
-import mapImage from "assets/map.png";
 import calendarIcon from "assets/calendar.svg";
 import clockIcon from "assets/clock.svg";
 import locationIcon from "assets/location.svg";
@@ -8,6 +7,7 @@ import facebookIcon from "assets/facebook.svg";
 import instagramIcon from "assets/instagram.svg";
 import hamburgerIcon from "assets/hamburger.svg";
 import { useState } from "react";
+import { Map } from "components/Map";
 
 export const Contact = () => {
 
@@ -71,11 +71,7 @@ export const Contact = () => {
 					</div>
 				</div>
 			</div>
-			<img
-				src={ mapImage }
-				alt="map"
-				className="absolute h-full w-full object-cover top-0 left-0 z-10"
-			/>
+			<Map/>
 		</div>
 	)
 }
