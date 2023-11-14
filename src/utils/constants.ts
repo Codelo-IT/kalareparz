@@ -1,0 +1,1 @@
+export const FOOTER_GRASS_WIDTH = 50
