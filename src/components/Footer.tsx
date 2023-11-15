@@ -13,7 +13,6 @@ import phoneFilledIcon from "assets/phone-filled.svg";
 import tractorIcon from "assets/tractor.svg";
 import horseIcon from "assets/horse.svg";
 import oboraIcon from "assets/obora.svg";
-import rootIcon from "assets/root.svg";
 import treeIcon from "assets/tree.svg";
 import caravanIcon from "assets/caravan.svg";
 import { FooterItem } from "components/FooterItem";
@@ -44,8 +43,7 @@ export const Footer = () => {
 			<img src={ caravanIcon } alt="trailer" className="absolute left-[calc(50%-32px)] top-[-30px] h-8"/>
 			<img src={ horseIcon } alt="Horse" className="absolute right-20 top-[-30px] h-8 -scale-x-100"/>
 			<img src={ oboraIcon } alt="Obora" className="absolute left-2/3 top-[-30px] h-8"/>
-			<img src={ treeIcon } alt="Tree" className="absolute left-10 top-[-40px] h-8"/>
-			<img src={ rootIcon } alt="Root" className="absolute left-10 top-[0px] h-8"/>
+			<img src={ treeIcon } alt="Tree" className="absolute left-[50px] top-[-45px] h-10"/>
 			<ContentWrapper className="flex justify-between gap-40">
 				<a href="/#">
 					<img
