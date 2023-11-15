@@ -13,6 +13,9 @@ import phoneIcon from "assets/telephone-call.svg";
 import tractorIcon from "assets/tractor.svg";
 import horseIcon from "assets/horse.svg";
 import oboraIcon from "assets/obora.svg";
+import rootIcon from "assets/root.svg";
+import treeIcon from "assets/tree.svg";
+import caravanIcon from "assets/caravan.svg";
 import { FooterItem } from "components/FooterItem";
 import { FooterTitle } from "components/FooterTitle";
 
@@ -36,26 +39,12 @@ export const Footer = () => {
 	return (
 		<div className="w-screen bg-darkGreen flex gap-3 mt-20 relative text-white py-10">
 			<Grass/>
-			<img
-				src={ tractorIcon }
-				alt="Tractor"
-				className="absolute left-20 top-[-30px] h-8"
-			/>
-			<img
-				src={ tractorIcon }
-				alt="Tractor"
-				className="absolute left-20 top-[-30px] h-8"
-			/>
-			<img
-				src={ horseIcon }
-				alt="Horse"
-				className="absolute right-20 top-[-30px] h-8 -scale-x-100"
-			/>
-			<img
-				src={ oboraIcon }
-				alt="Obora"
-				className="absolute right-1/3 top-[-30px] h-8"
-			/>
+			<img src={ tractorIcon } alt="Tractor" className="absolute left-1/2 top-[-30px] h-8"/>
+			<img src={ caravanIcon } alt="trailer" className="absolute left-[calc(50%-32px)] top-[-30px] h-8"/>
+			<img src={ horseIcon } alt="Horse" className="absolute right-20 top-[-30px] h-8 -scale-x-100"/>
+			<img src={ oboraIcon } alt="Obora" className="absolute left-2/3 top-[-30px] h-8"/>
+			<img src={ treeIcon } alt="Tree" className="absolute left-10 top-[-40px] h-8"/>
+			<img src={ rootIcon } alt="Root" className="absolute left-10 top-[0px] h-8"/>
 			<ContentWrapper className="flex justify-between gap-40">
 				<a href="/#">
 					<img
