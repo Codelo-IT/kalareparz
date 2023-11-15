@@ -1,13 +1,11 @@
 
 type Props = {
 	title: string
-	description: string
 	image: string
 }
 
 export const SingleSlide = ({
 	title,
-	description,
 	image,
 }: Props) => {
 
@@ -25,9 +23,6 @@ export const SingleSlide = ({
 			>
 				<div className="text-6xl text-white max-w-2xl font-extralight">
 					{ title }
-				</div>
-				<div className="ml-3 mt-2 text-white">
-					{ description }
 				</div>
 			</div>
 		</div>

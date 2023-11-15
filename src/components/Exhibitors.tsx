@@ -7,6 +7,7 @@ import vegetablesImage from "assets/vegetables.jpg";
 import classNames from "classnames";
 import { Link } from "components/Link";
 import { ArrowIcon } from "components/ArrowIcon";
+import { ContentWrapper } from "components/ContentWrapper";
 
 type Exhibitor = {
 	title: string
@@ -42,7 +43,7 @@ export const Exhibitors = () => {
 		{
 			title: "Soki i jabłka",
 			name: "Tłocznia Pawłowscy Antoni Pawłowski",
-			description: "Tłocznia ich to naprawde giga chad. Przeciez jak raz sie tego soku napijesz to juz nie bedizesz chical innego sie w zyciu napic",
+			description: "Intensywny, bogaty smak naszych soków jest naszą pasją, którą z radością dzielimy się z Państwem!",
 			image: appleJuiceImage,
 			color: CardColor.ORANGE
 		},
@@ -63,14 +64,14 @@ export const Exhibitors = () => {
 		{
 			title: "Chleby",
 			name: "Monika Kadela",
-			description: "Chlebek od Pani Moniczki to niebo w gębie. Po spróbowaniu tego chlebka każdy inny przypomniał mi właśnie o tym...",
+			description: "Najpopularniejszym produktem jest chleb pszenno – żytni, może być z dodatkami, takimi jak np. czarnuszka oraz ciasta, które przygotowywane są według tradycyjnych pilnie strzeżonych przepisów. Wszystko z miłością do jakości i zadowolonych klientów. ",
 			image: breadImage,
 			color: CardColor.ORANGE
 		}
 	];
 
 	return (
-		<div id="wystawcy" className="flex flex-col items-center text-center mt-20 gap-16">
+		<section id="wystawcy" className="container-wrapper flex flex-col items-center text-center mt-20 mb-20 gap-16">
 			<div className="flex flex-col gap-5">
 				<div className="text-5xl text-black font-semibold font-title italic">
 					Wystawcy
@@ -97,7 +98,7 @@ export const Exhibitors = () => {
 								classNames("flex gap-3 justify-between border h-min",
 									{ "bg-orange border-darkOrange": color === CardColor.ORANGE },
 									{ "bg-yellow border-darkYellow": color === CardColor.YELLOW },
-									{ "bg-green border-darkGreen": color === CardColor.GREEN },
+									{ "bg-green border-darkGreen": color === CardColor.GREEN }
 								)
 							}>
 								<div className="text-left p-8">
@@ -115,9 +116,8 @@ export const Exhibitors = () => {
 							</Link>
 						</div>
 					</div>
-
 				) }
 			</div>
-		</div>
+		</section>
 	);
 };

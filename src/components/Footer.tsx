@@ -6,8 +6,6 @@ import logo from "assets/logo.png";
 import calendarFilledIcon from "assets/calendar-filled.svg";
 import timeFilledIcon from "assets/time-filled.svg";
 import locationFilledIcon from "assets/location-filled.svg";
-import facebookIcon from "assets/facebook.svg";
-import instagramIcon from "assets/instagram.svg";
 import mailFilledIcon from "assets/mail-filled.svg";
 import phoneFilledIcon from "assets/phone-filled.svg";
 import tractorIcon from "assets/tractor.svg";
@@ -18,6 +16,9 @@ import caravanIcon from "assets/caravan.svg";
 import { FooterItem } from "components/FooterItem";
 import { FooterTitle } from "components/FooterTitle";
 import { Link } from "components/Link";
+import { FacebookIcon } from "components/icons/FacebookIcon";
+import React from "react";
+import { InstagramIcon } from "components/icons/InstagramIcon";
 
 export const Footer = () => {
 
@@ -37,7 +38,7 @@ export const Footer = () => {
 	)}</>
 
 	return (
-		<div className="w-screen bg-darkBrown flex gap-3 mt-20 relative text-white py-10">
+		<footer className="w-screen bg-darkBrown flex gap-3 mt-20 relative text-white py-10">
 			<Grass/>
 			<img src={ tractorIcon } alt="Tractor" className="absolute left-1/2 top-[-30px] h-8"/>
 			<img src={ caravanIcon } alt="trailer" className="absolute left-[calc(50%-32px)] top-[-30px] h-8"/>
@@ -59,11 +60,11 @@ export const Footer = () => {
 					<FooterItem icon={ phoneFilledIcon } name="123 123 123"/>
 					<FooterItem icon={ mailFilledIcon } name="kalareparz@gmail.com"/>
 					<div className="flex items-center gap-3 mt-2">
-						<Link className="flex items-center" to="https://www.facebook.com/kalareparz">
-							<img src={ facebookIcon } alt="item-icon" className="h-8"/>
+						<Link className="flex text-brown items-center" to="https://www.facebook.com/kalareparz">
+							<FacebookIcon className="h-8 w-8 transition-colors"/>
 						</Link>
-						<Link className="flex items-center" to="https://www.instagram.com/kalareparz">
-							<img src={ instagramIcon } alt="item-icon" className="h-8"/>
+						<Link className="flex text-brown items-center" to="https://www.instagram.com/kalareparz">
+							<InstagramIcon className="h-8 w-8 transition-colors"/>
 						</Link>
 					</div>
 				</div>
@@ -84,6 +85,6 @@ export const Footer = () => {
 					<FooterItem name="Kontakt" link="/#kontakt"/>
 				</div>
 			</ContentWrapper>
-		</div>
+		</footer>
 	)
 }

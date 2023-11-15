@@ -14,9 +14,8 @@ export const Hero = () => {
 
 	return (
 		<Swiper
-			className="h-[60vh] w-full !pt-[140px]"
+			className="h-[60vh] w-full !pt-[128px]"
 			effect="fade"
-			onSlideChange={() => console.log('slide change')}
 			modules={ [ Navigation, Pagination, A11y, EffectFade, Autoplay ] }
 			loop
 			autoplay={{ delay: 3000, }}
@@ -24,21 +23,18 @@ export const Hero = () => {
 			<SwiperSlide>
 				<SingleSlide
 					title=""
-					description=" "
 					image={ hamImage }
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<SingleSlide
-					title="Jabłka"
-					description="Pierwszy w okolicy targ lokalnych płodów rolnych"
+					title="Pierwszy w okolicy targ lokalnych płodów rolnych"
 					image={ applesImage }
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<SingleSlide
 					title="Chleb"
-					description="Chopok chleb sztos ze jo cie chwyca"
 					image={ breadImage }
 				/>
 			</SwiperSlide>
