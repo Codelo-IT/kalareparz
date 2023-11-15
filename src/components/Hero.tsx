@@ -14,28 +14,27 @@ export const Hero = () => {
 
 	return (
 		<Swiper
-			className="h-[60vh] w-full !pt-[100px]"
+			className="h-[60vh] w-full !pt-[140px]"
 			effect="fade"
 			onSlideChange={() => console.log('slide change')}
 			modules={ [ Navigation, Pagination, A11y, EffectFade, Autoplay ] }
 			loop
-			pagination={ { clickable: true } }
 			autoplay={{
-				delay: 2500,
+				delay: 3000,
 				disableOnInteraction: false,
 			}}
 		>
 			<SwiperSlide>
 				<SingleSlide
-					title="Szynka"
-					description="Zajebista szynka"
+					title=""
+					description=" "
 					image={ hamImage }
 				/>
 			</SwiperSlide>
 			<SwiperSlide>
 				<SingleSlide
 					title="Jabłka"
-					description="Niedaleko pada jabłko od jabłoni"
+					description="Pierwszy w okolicy targ lokalnych płodów rolnych"
 					image={ applesImage }
 				/>
 			</SwiperSlide>
