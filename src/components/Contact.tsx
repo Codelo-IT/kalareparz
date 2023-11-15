@@ -9,15 +9,12 @@ import { ContactItem } from "components/ContactItem";
 export const Contact = () => {
 
 	const [ isSidebarOpen, toggleSidebarOpen ] = useState(true);
-	
+
 	return (
-		<div
-			id="kontakt"
-			className="relative mt-20 h-[400px] shadow-xl overflow-hidden"
-		>
+		<section id="kontakt" className="container-wrapper relative mt-20 h-[500px] shadow-xl overflow-hidden">
 			<div
-				className="absolute top-0 w-[500px] h-full flex flex-col gap-5 p-8 z-20 bg-white transition-all"
-				style={ { left: isSidebarOpen ? 0 : -500 } }
+				className="absolute top-0 w-[600px] h-full flex flex-col gap-5 p-8 z-20 bg-white transition-all"
+				style={ { left: isSidebarOpen ? 0 : -600 } }
 			>
 				<div
 					className="absolute top-5 -right-8 bg-white p-2 rounded-r cursor-pointer"
@@ -33,6 +30,6 @@ export const Contact = () => {
 				<ContactItem icon={ locationIcon } label="Ul. Kazimierza Wielkiego 10, Skawina"/>
 			</div>
 			<Map/>
-		</div>
-	)
-}
+		</section>
+	);
+};

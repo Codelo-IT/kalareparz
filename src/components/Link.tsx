@@ -11,6 +11,6 @@ export const Link = ({
 	children,
 	className,
 }: PropsWithChildren<Props>) =>
-	<a href={ to } className={ classNames("hover:text-green", className) }>
+	<a href={ to } className={ classNames("transition-colors hover:text-green", className) }>
 		{ children }
 	</a>

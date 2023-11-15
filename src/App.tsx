@@ -1,9 +1,10 @@
 import { Header } from "components/Header";
 import { Hero } from "components/Hero";
-import { ContentWrapper } from "components/ContentWrapper";
 import { Exhibitors } from "components/Exhibitors";
 import { Contact } from "components/Contact";
 import { Footer } from "components/Footer";
+import { AboutUs } from "components/AboutUs";
+import { GoodQuality } from "components/GoodQuality";
 
 function App() {
 
@@ -11,10 +12,10 @@ function App() {
 		<div>
 			<Header/>
 			<Hero/>
-			<ContentWrapper>
-				<Exhibitors/>
-				<Contact/>
-			</ContentWrapper>
+			<AboutUs/>
+			<Exhibitors/>
+			<GoodQuality/>
+			<Contact/>
 			<Footer/>
 		</div>
 	);
