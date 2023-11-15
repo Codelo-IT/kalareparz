@@ -8,6 +8,8 @@ import clockIcon from "assets/clock.svg";
 import locationIcon from "assets/location.svg";
 import facebookIcon from "assets/facebook.svg";
 import instagramIcon from "assets/instagram.svg";
+import mailIcon from "assets/email.svg";
+import phoneIcon from "assets/telephone-call.svg";
 import { FooterItem } from "components/FooterItem";
 import { FooterTitle } from "components/FooterTitle";
 
@@ -41,11 +43,12 @@ export const Footer = () => {
 				</a>
 				<div className="flex flex-col gap-3">
 					<FooterTitle>
-						Przejdź do
+						Kontakt
 					</FooterTitle>
-					<FooterItem name="O nas" link="/#onas"/>
-					<FooterItem name="Wystawcy" link="/#wystawcy"/>
-					<FooterItem name="Kontakt" link="/#kontakt"/>
+					<FooterItem icon={ facebookIcon } name="Facebook" link="https://www.facebook.com/kalareparz"/>
+					<FooterItem icon={ instagramIcon } name="Instagram" link="https://www.instagram.com/kalareparz"/>
+					<FooterItem icon={ phoneIcon } name="Instagram"/>
+					<FooterItem icon={ mailIcon } name="Instagram"/>
 				</div>
 				<div className="flex flex-col gap-3">
 					<FooterTitle>
@@ -57,10 +60,11 @@ export const Footer = () => {
 				</div>
 				<div className="flex flex-col gap-3">
 					<FooterTitle>
-						Social media
+						Przejdź do
 					</FooterTitle>
-					<FooterItem icon={ facebookIcon } name="Facebook" link="https://www.facebook.com/kalareparz"/>
-					<FooterItem icon={ instagramIcon } name="Instagram" link="https://www.instagram.com/kalareparz"/>
+					<FooterItem name="O nas" link="/#onas"/>
+					<FooterItem name="Wystawcy" link="/#wystawcy"/>
+					<FooterItem name="Kontakt" link="/#kontakt"/>
 				</div>
 			</ContentWrapper>
 		</div>
