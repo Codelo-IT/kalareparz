@@ -18,7 +18,7 @@ export const Header = () => {
 				{"bg-white shadow-md": scrollPosition != 0}
 			)
 		}>
-			<Logo className="absolute top-4 left-5 h-20"/>
+			<Logo className="absolute top-8 left-6 h-[150px]"/>
 			<div className="relative flex flex-col justify-center items-center gap-5">
 				<div className="flex items-center gap-20">
 					<a href="/#onas" className="cursor-pointer transition hover:text-green tracking-wide">
