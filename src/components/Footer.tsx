@@ -47,8 +47,8 @@ export const Footer = () => {
 					</FooterTitle>
 					<FooterItem icon={ facebookIcon } name="Facebook" link="https://www.facebook.com/kalareparz"/>
 					<FooterItem icon={ instagramIcon } name="Instagram" link="https://www.instagram.com/kalareparz"/>
-					<FooterItem icon={ phoneIcon } name="Instagram"/>
-					<FooterItem icon={ mailIcon } name="Instagram"/>
+					<FooterItem icon={ phoneIcon } name="123 123 123"/>
+					<FooterItem icon={ mailIcon } name="kalareparz@gmail.com"/>
 				</div>
 				<div className="flex flex-col gap-3">
 					<FooterTitle>
