@@ -13,8 +13,8 @@ export const Contact = () => {
 	return (
 		<div className="relative mt-20 h-[400px] shadow-xl overflow-hidden">
 			<div
-				className="absolute top-0 w-[400px] h-full flex flex-col gap-5 z-20 bg-white p-5 transition-all"
-				style={ { left: isSidebarOpen ? 0 : -400 } }
+				className="absolute top-0 w-[500px] h-full flex flex-col gap-5 p-8 z-20 bg-white transition-all"
+				style={ { left: isSidebarOpen ? 0 : -500 } }
 			>
 				<div
 					className="absolute top-5 -right-8 bg-white p-2 rounded-r cursor-pointer"
@@ -22,12 +22,12 @@ export const Contact = () => {
 				>
 					<img src={ hamburgerIcon } alt="<-" className="h-5"/>
 				</div>
-				<div className="text-4xl mb-2">
+				<div className="mb-2 text-5xl text-black font-semibold font-title italic">
 					Znajdziesz nas
 				</div>
-				<ContactItem icon={ calendarIcon } label="Co sobote"/>
-				<ContactItem icon={ clockIcon } label="od 8:00 do 13:00"/>
-				<ContactItem icon={ locationIcon } label="ul. Kazimierza Wielkiego 10, Skawina"/>
+				<ContactItem icon={ calendarIcon } label="Co sobotę"/>
+				<ContactItem icon={ clockIcon } label="Od 8:00 do 13:00"/>
+				<ContactItem icon={ locationIcon } label="Ul. Kazimierza Wielkiego 10, Skawina"/>
 			</div>
 			<Map/>
 		</div>

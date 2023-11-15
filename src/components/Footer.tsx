@@ -3,15 +3,16 @@ import { FOOTER_GRASS_WIDTH } from "utils/constants";
 import { useScreenSize } from "utils/hooks/useScreenSize";
 import { ContentWrapper } from "components/ContentWrapper";
 import logo from "assets/logo.png";
-import calendarIcon from "assets/calendar.svg";
-import clockIcon from "assets/clock.svg";
-import locationIcon from "assets/location.svg";
+import calendarFilledIcon from "assets/calendar-filled.svg";
+import timeFilledIcon from "assets/time-filled.svg";
+import locationFilledIcon from "assets/location-filled.svg";
 import facebookIcon from "assets/facebook.svg";
 import instagramIcon from "assets/instagram.svg";
-import mailIcon from "assets/email.svg";
-import phoneIcon from "assets/telephone-call.svg";
+import mailFilledIcon from "assets/mail-filled.svg";
+import phoneFilledIcon from "assets/phone-filled.svg";
 import { FooterItem } from "components/FooterItem";
 import { FooterTitle } from "components/FooterTitle";
+import { Link } from "components/Link";
 
 export const Footer = () => {
 
@@ -31,7 +32,7 @@ export const Footer = () => {
 	)}</>
 
 	return (
-		<div className="w-screen bg-darkGreen flex gap-3 mt-20 relative text-white py-10">
+		<div className="w-screen bg-darkBrown flex gap-3 mt-20 relative text-white py-10">
 			<Grass/>
 			<ContentWrapper className="flex justify-between gap-40">
 				<a href="/#">
@@ -45,18 +46,24 @@ export const Footer = () => {
 					<FooterTitle>
 						Kontakt
 					</FooterTitle>
-					<FooterItem icon={ facebookIcon } name="Facebook" link="https://www.facebook.com/kalareparz"/>
-					<FooterItem icon={ instagramIcon } name="Instagram" link="https://www.instagram.com/kalareparz"/>
-					<FooterItem icon={ phoneIcon } name="123 123 123"/>
-					<FooterItem icon={ mailIcon } name="kalareparz@gmail.com"/>
+					<FooterItem icon={ phoneFilledIcon } name="123 123 123"/>
+					<FooterItem icon={ mailFilledIcon } name="kalareparz@gmail.com"/>
+					<div className="flex items-center gap-3 mt-2">
+						<Link className="flex items-center" to="https://www.facebook.com/kalareparz">
+							<img src={ facebookIcon } alt="item-icon" className="h-8"/>
+						</Link>
+						<Link className="flex items-center" to="https://www.instagram.com/kalareparz">
+							<img src={ instagramIcon } alt="item-icon" className="h-8"/>
+						</Link>
+					</div>
 				</div>
 				<div className="flex flex-col gap-3">
 					<FooterTitle>
 						Godziny otwarcia
 					</FooterTitle>
-					<FooterItem icon={ calendarIcon } name="Każda sobota"/>
-					<FooterItem icon={ clockIcon } name="od 8:00 do 13:00"/>
-					<FooterItem icon={ locationIcon } name="ul. Kazimierza wielkiego 10, Skawina"/>
+					<FooterItem icon={ calendarFilledIcon } name="Każda sobota"/>
+					<FooterItem icon={ timeFilledIcon } name="Od 8:00 do 13:00"/>
+					<FooterItem icon={ locationFilledIcon } name="Ul. Kazimierza wielkiego 10, Skawina"/>
 				</div>
 				<div className="flex flex-col gap-3">
 					<FooterTitle>
