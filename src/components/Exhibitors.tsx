@@ -5,7 +5,6 @@ import hamImage from "assets/ham-2.jpg";
 import oilImage from "assets/oil.jpg";
 import vegetablesImage from "assets/vegetables.jpg";
 import classNames from "classnames";
-import arrowIcon from "assets/arrow.svg";
 import { Link } from "components/Link";
 import { ArrowIcon } from "components/ArrowIcon";
 
