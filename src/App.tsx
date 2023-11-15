@@ -7,9 +7,8 @@ import { GoodQuality } from "components/GoodQuality";
 import { NewHero } from "components/NewHero";
 
 function App() {
-
 	return (
-		<div>
+		<>
 			<Header/>
 			<NewHero/>
 			<AboutUs/>
@@ -17,7 +16,7 @@ function App() {
 			<GoodQuality/>
 			<Contact/>
 			<Footer/>
-		</div>
+		</>
 	);
 }
 
