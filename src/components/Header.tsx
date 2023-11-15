@@ -1,15 +1,9 @@
 import React from "react";
-import logo from "assets/logo.png";
+import { Logo } from "components/Logo";
 
 export const Header = () => (
 	<div className="py-4 shadow-md w-screen flex items-center fixed z-50 justify-center text-xl bg-white">
-		<a href="/#">
-			<img
-				src={ logo }
-				alt="logo"
-				className="absolute top-5 left-5 h-36"
-			/>
-		</a>
+		<Logo className="absolute top-5 left-5 h-36"/>
 		<div className="flex flex-col justify-center items-center gap-5">
 			<div className="font-title text-6xl italic font-semibold">
 				Kalareparz

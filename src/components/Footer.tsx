@@ -2,7 +2,6 @@ import grass from "assets/grass.svg";
 import { FOOTER_GRASS_WIDTH } from "utils/constants";
 import { useScreenSize } from "utils/hooks/useScreenSize";
 import { ContentWrapper } from "components/ContentWrapper";
-import logo from "assets/logo.png";
 import calendarFilledIcon from "assets/calendar-filled.svg";
 import timeFilledIcon from "assets/time-filled.svg";
 import locationFilledIcon from "assets/location-filled.svg";
@@ -18,6 +17,7 @@ import caravanIcon from "assets/caravan.svg";
 import { FooterItem } from "components/FooterItem";
 import { FooterTitle } from "components/FooterTitle";
 import { Link } from "components/Link";
+import { Logo } from "components/Logo";
 
 export const Footer = () => {
 
@@ -45,13 +45,7 @@ export const Footer = () => {
 			<img src={ oboraIcon } alt="Obora" className="absolute left-2/3 top-[-30px] h-8"/>
 			<img src={ treeIcon } alt="Tree" className="absolute left-[50px] top-[-45px] h-10"/>
 			<ContentWrapper className="flex justify-between gap-40">
-				<a href="/#">
-					<img
-						src={ logo }
-						alt="logo"
-						className="h-36"
-					/>
-				</a>
+				<Logo className="h-36"/>
 				<div className="flex flex-col gap-3">
 					<FooterTitle>
 						Kontakt
