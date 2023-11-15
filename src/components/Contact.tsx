@@ -5,7 +5,6 @@ import hamburgerIcon from "assets/hamburger.svg";
 import { useState } from "react";
 import { Map } from "components/Map";
 import { ContactItem } from "components/ContactItem";
-import { ContentWrapper } from "components/ContentWrapper";
 
 export const Contact = () => {
 

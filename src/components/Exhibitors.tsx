@@ -7,7 +7,6 @@ import vegetablesImage from "assets/vegetables.jpg";
 import classNames from "classnames";
 import { Link } from "components/Link";
 import { ArrowIcon } from "components/ArrowIcon";
-import { ContentWrapper } from "components/ContentWrapper";
 
 type Exhibitor = {
 	title: string
