@@ -2,7 +2,7 @@ import React from "react";
 import logo from "assets/logo.png";
 
 export const Header = () => (
-	<div className="py-4 shadow-md w-screen flex items-center fixed z-50 justify-center text-xl bg-light">
+	<div className="py-4 shadow-md w-screen flex items-center fixed z-50 justify-center text-xl bg-white">
 		<a href="/#">
 			<img
 				src={ logo }

@@ -13,15 +13,15 @@ export const ContactItem = ({ link, icon, label }: Props) =>
 		{
 			isNotNull(link) ?
 				<Link className="flex items-center gap-5" to={ link }>
-					<img src={ icon } alt="calendarIcon" className="h-5"/>
-					<div>
+					<img src={ icon } alt="calendarIcon" className="h-8"/>
+					<div className="text-lg font-light">
 						{ label }
 					</div>
 				</Link>
 				:
 				<div className="flex items-center gap-5">
-					<img src={ icon } alt="calendarIcon" className="h-5"/>
-					<div>
+					<img src={ icon } alt="calendarIcon" className="h-8"/>
+					<div className="text-lg font-light">
 						{ label }
 					</div>
 				</div>

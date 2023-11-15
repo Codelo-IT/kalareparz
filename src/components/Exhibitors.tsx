@@ -73,10 +73,10 @@ export const Exhibitors = () => {
 	return (
 		<div id="wystawcy" className="flex flex-col items-center text-center mt-20 gap-16">
 			<div className="flex flex-col gap-5">
-				<div className="text-5xl text-black font-medium ">
+				<div className="text-5xl text-black font-semibold font-title italic">
 					Wystawcy
 				</div>
-				<div className="text-lg text-black font-medium max-w-3xl font-light">
+				<div className="text-lg text-black font-light max-w-3xl font-light">
 					Nasi wystawcy to profesjonaliści w swoich branżach. Znajdziesz u nas różnorodne produkty - warzywa, wędliny, sery kozie, chleby czy przetwory!
 				</div>
 			</div>
@@ -91,7 +91,9 @@ export const Exhibitors = () => {
 							/>
 						</div>
 						<div className="w-2/5 flex flex-col gap-6 items-start">
-							<div className="text-3xl font-bold font-title italic">{ title }</div>
+							<div className="text-3xl font-medium font-title italic">
+								{ title }
+							</div>
 							<div className={
 								classNames("flex gap-3 justify-between border h-min",
 									{ "bg-orange border-darkOrange": color === CardColor.ORANGE },
