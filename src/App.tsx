@@ -5,6 +5,7 @@ import { Contact } from "components/Contact";
 import { Footer } from "components/Footer";
 import { AboutUs } from "components/AboutUs";
 import { GoodQuality } from "components/GoodQuality";
+import { WhyUs } from "components/WhyUs/WhyUs";
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<AboutUs/>
 			<Exhibitors/>
 			<GoodQuality/>
+			<WhyUs/>
 			<Contact/>
 			<Footer/>
 		</>

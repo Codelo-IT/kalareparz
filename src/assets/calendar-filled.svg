@@ -1,11 +1,1 @@
-<svg width="330" height="330" viewBox="0 0 330 330" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_4_41)">
-<path d="M0 315C0 323.284 6.716 330 15 330H315C323.285 330 330 323.284 330 315V120H0V315Z" fill="#695F5F"/>
-<path d="M315 30H230V15C230 6.716 223.285 0 215 0C206.717 0 200 6.716 200 15V30H130V15C130 6.716 123.284 0 115 0C106.716 0 100 6.716 100 15V30H15C6.716 30 0 36.716 0 45V90H330V45C330 36.716 323.285 30 315 30Z" fill="#695F5F"/>
-</g>
-<defs>
-<clipPath id="clip0_4_41">
-<rect width="330" height="330" fill="white"/>
-</clipPath>
-</defs>
-</svg>
+<svg width="330" height="330" viewBox="0 0 330 330" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_4_41)"><path d="M0 315C0 323.284 6.716 330 15 330H315C323.285 330 330 323.284 330 315V120H0V315Z" fill="#695F5F"/><path d="M315 30H230V15C230 6.716 223.285 0 215 0C206.717 0 200 6.716 200 15V30H130V15C130 6.716 123.284 0 115 0C106.716 0 100 6.716 100 15V30H15C6.716 30 0 36.716 0 45V90H330V45C330 36.716 323.285 30 315 30Z" fill="#695F5F"/></g><defs><clipPath id="clip0_4_41"><rect width="330" height="330" fill="white"/></clipPath></defs></svg>
