@@ -19,10 +19,7 @@ export const Hero = () => {
 			onSlideChange={() => console.log('slide change')}
 			modules={ [ Navigation, Pagination, A11y, EffectFade, Autoplay ] }
 			loop
-			autoplay={{
-				delay: 3000,
-				disableOnInteraction: false,
-			}}
+			autoplay={{ delay: 3000, }}
 		>
 			<SwiperSlide>
 				<SingleSlide
