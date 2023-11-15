@@ -10,6 +10,9 @@ import facebookIcon from "assets/facebook.svg";
 import instagramIcon from "assets/instagram.svg";
 import mailIcon from "assets/email.svg";
 import phoneIcon from "assets/telephone-call.svg";
+import tractorIcon from "assets/tractor.svg";
+import horseIcon from "assets/horse.svg";
+import oboraIcon from "assets/obora.svg";
 import { FooterItem } from "components/FooterItem";
 import { FooterTitle } from "components/FooterTitle";
 
@@ -22,7 +25,7 @@ export const Footer = () => {
 			<img
 			src={ grass }
 			alt="grass"
-			className="absolute top-[-30px]"
+			className="absolute top-[-30px] z-10"
 			style={ {
 				width: FOOTER_GRASS_WIDTH,
 				left: index * (FOOTER_GRASS_WIDTH * 0.94),
@@ -33,6 +36,26 @@ export const Footer = () => {
 	return (
 		<div className="w-screen bg-[#338728] flex gap-3 mt-20 relative text-white py-10">
 			<Grass/>
+			<img
+				src={ tractorIcon }
+				alt="Tractor"
+				className="absolute left-20 top-[-30px] h-8"
+			/>
+			<img
+				src={ tractorIcon }
+				alt="Tractor"
+				className="absolute left-20 top-[-30px] h-8"
+			/>
+			<img
+				src={ horseIcon }
+				alt="Horse"
+				className="absolute right-20 top-[-30px] h-8 -scale-x-100"
+			/>
+			<img
+				src={ oboraIcon }
+				alt="Obora"
+				className="absolute right-1/3 top-[-30px] h-8"
+			/>
 			<ContentWrapper className="flex justify-between gap-40">
 				<a href="/#">
 					<img
