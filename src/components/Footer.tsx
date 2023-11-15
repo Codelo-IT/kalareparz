@@ -34,7 +34,7 @@ export const Footer = () => {
 	)}</>
 
 	return (
-		<div className="w-screen bg-[#338728] flex gap-3 mt-20 relative text-white py-10">
+		<div className="w-screen bg-darkGreen flex gap-3 mt-20 relative text-white py-10">
 			<Grass/>
 			<img
 				src={ tractorIcon }
@@ -75,7 +75,7 @@ export const Footer = () => {
 				</div>
 				<div className="flex flex-col gap-3">
 					<FooterTitle>
-						Godziny otwarca
+						Godziny otwarcia
 					</FooterTitle>
 					<FooterItem icon={ calendarIcon } name="Każda sobota"/>
 					<FooterItem icon={ clockIcon } name="od 8:00 do 13:00"/>
