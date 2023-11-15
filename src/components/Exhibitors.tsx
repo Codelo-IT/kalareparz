@@ -85,7 +85,7 @@ export const Exhibitors = () => {
 						<div className="h-full w-3/5 overflow-hidden">
 							<img
 								src={ image }
-								alt="single-exhibitor-image"
+								alt="single-exhibitor"
 								className="h-full w-full object-cover"
 							/>
 						</div>
