@@ -74,17 +74,11 @@ export const Header = () => {
 			<div
 				onClick={ () => toggleSidebarOpen(false) }
 				className={ classNames(
-					"fixed h-screen w-screen bg-black left-0 top-0 z-10 transition-opacity",
+					"fixed h-screen w-screen bg-blue-300 left-0 top-0 z-10 transition-opacity",
 					{ "opacity-0 pointer-events-none": !isSidebarOpen },
-					{ "opacity-50": isSidebarOpen },
+					{ "opacity-70": isSidebarOpen },
 				) }
 			>
-			</div>
-			<div className={ classNames(
-				"fixed h-screen w-screen bg-blue-300 left-0 top-0 z-10 transition-opacity",
-				{ "opacity-0": !isSidebarOpen },
-				{ "opacity-70": isSidebarOpen },
-			) }>
 			</div>
 			<img
 				src={ cloudIcon }
