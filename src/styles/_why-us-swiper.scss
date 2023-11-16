@@ -31,35 +31,56 @@
 
 #why-us-swiper-custom-pagination-wrapper {
 	.swiper-custom-bullet {
-		padding: 20px;
+		padding: 10px 16px;
+		aspect-ratio: 1/1;
+		min-width: 117.28px;
 		border-radius: 5px;
-		border: 1px solid gray;
+		border: 1px solid lightgray;
 		display: flex;
 		align-items: center;
+		flex-direction: column;
 		justify-content: center;
 		gap: 5px;
 		background-color: white;
+        cursor: pointer;
+		transition: background-color 100ms ease-in, border-color 100ms ease-in;
+
+		&:hover {
+			background-color: rgb(79,125,74);
+			border-color: rgb(79,125,74);
+
+			.text {
+				color: white;
+			}
+
+			svg {
+				fill: rgb(224,194,114);
+			}
+		}
 
 		svg {
-			fill: green;
-			height: 30px;
-			width: 30px;
+			fill: rgb(79,125,74);
+			height: 50px;
+			width: 50px;
+			transition: fill 100ms ease-in;
 		}
 
 		.text {
 			font-size: 16px;
 			font-weight: 500;
-			color: black
+			color: black;
+			transition: color 100ms ease-in;
 		}
 	}
 
 	.swiper-custom-bullet-active {
 		@extend .swiper-custom-bullet;
-		background-color: green;
+		background-color: rgb(79,125,74);
 
 		svg {
-			fill: gold;
+			fill: rgb(224,194,114);
 		}
+
 		.text {
 			color: white;
 		}
