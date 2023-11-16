@@ -17,10 +17,11 @@ type Exhibitor = {
 	name: string
 	description: string
 	image: string
-	color: CardColor
+	color: Color
+	link?: string
 }
 
-enum CardColor {
+enum Color {
 	GREEN = "green",
 	YELLOW = "yellow",
 	ORANGE = "orange"
@@ -31,45 +32,50 @@ export const Exhibitors = () => {
 	const exhibitors: Exhibitor[] = [
 		{
 			title: "Warzywa i przetwory",
-			name: "Gospodarstwo Rolne Gorzkowscy",
+			name: "Gospodarstwo Gorzkowscy",
 			description: "Jesteśmy gospodarstwem typowo rodzinnym, skupiamy się przede wszystkim na tradycyjnej uprawie warzyw sezonowych, okopowych i kiszonkach. Sprzedajemy tylko i wyłącznie to, co uda nam się wyprodukować, więc nie znajdziecie u nas w grudniu pomidorów czy ogórków, a wiosną kalafiora. Zdrowo, sezonowo i tradycyjnie to motto naszego gospodarstwa.",
 			image: vegetablesImage,
-			color: CardColor.GREEN
+			color: Color.GREEN,
+			link: "https://www.facebook.com/profile.php?id=100083366910828"
 		},
 		{
 			title: "Wędliny",
-			name: "„GAWOR” Szczepan GAWOR",
+			name: "„GAWOR” - Szczepan Gawor",
 			description: "Oferujemy produkty tradycyjne, o prostym składzie (zazwyczaj jest to tylko mięso, sól oraz przyprawy), z polskiego lokalnego mięsa (z małych tradycyjnych hodowli). Produkty te są w wędzone tradycyjnie w wędzarni opalanej drewnem.",
 			image: hamImage,
-			color: CardColor.YELLOW
+			color: Color.YELLOW,
+			link: "https://www.gaworwedliny.pl/"
 		},
 		{
 			title: "Soki i jabłka",
-			name: "Tłocznia Pawłowscy Antoni Pawłowski",
+			name: "Tłocznia Pawłowscy - Antoni Pawłowski",
 			description: "Intensywny, bogaty smak naszych soków jest naszą pasją, którą z radością dzielimy się z Państwem!",
 			image: appleJuiceImage,
-			color: CardColor.ORANGE
+			color: Color.ORANGE,
+			link: "http://www.sokipawlowski.pl/"
 		},
 		{
 			title: "Nabiał kozi",
-			name: "Kozie Frykasy Maciej Dybowski",
+			name: "Kozie Frykasy - Maciej Dybowski",
 			description: "Wśród wyrobów pochodzących z naszego ekologicznego gospodarstwa \"Kozie Frykasy\" znaleźć można takie przysmaki jak: bundz, bundz wędzony, jogurt, kefir, świeże mleko, sery pleśniowe, długodojrzewające oraz nasze specjały- sery w zalewie, twarożki, fetę, halumi czy nawet 2 letni parmezan, rikotta i słynne już \"Koscypki\". Oczywiście wszystkie wyroby powstają wyłącznie ze świeżego, niepasteryzowanego koziego mleka.",
 			image: cheeseImage,
-			color: CardColor.GREEN
+			color: Color.GREEN,
+			link: "https://www.facebook.com/koziefrykasy"
 		},
 		{
-			title: "Oleje tłoczone",
-			name: "Stefan Wójcicki- Oleje tłoczone",
-			description: "Olej dobry bardzo fest. Olej dobry bardzo fest x2",
+			title: "Oleje tłoczone na zimno",
+			name: "Dobra Natura - Stefan Wójcicki",
+			description: "Rośliny, z których jest tłoczony olej dobierane są z ogromną uwagą i pochodzą jedynie od sprawdzonych dostawców.",
 			image: oilImage,
-			color: CardColor.YELLOW
+			color: Color.YELLOW,
+			link: "https://www.facebook.com/profile.php?id=100064221603668"
 		},
 		{
 			title: "Wypieki",
 			name: "Monika Kadela",
 			description: "Najpopularniejszym produktem jest chleb pszenno – żytni, może być z dodatkami, takimi jak np. czarnuszka oraz ciasta, które przygotowywane są według tradycyjnych pilnie strzeżonych przepisów. Wszystko z miłością do jakości i zadowolonych klientów.",
 			image: breadImage,
-			color: CardColor.ORANGE
+			color: Color.ORANGE
 		}
 	];
 
@@ -88,7 +94,7 @@ export const Exhibitors = () => {
 					</div>
 				</div>
 				<div className="flex flex-col gap-20">
-					{ exhibitors.map(({ title, name, description, image, color }) =>
+					{ exhibitors.map(({ title, name, description, image, color, link }) =>
 						<div className={ classNames(
 							"flex gap-10 items-center",
 							"xl:odd:mr-[200px] xl:even:ml-[200px]",
@@ -113,9 +119,7 @@ export const Exhibitors = () => {
 								<div className="flex items-center w-full gap-4">
 									<CircleIcon className={
 										classNames("h-10 w-10",
-											{ "text-orange": color === CardColor.ORANGE },
-											{ "text-yellow ": color === CardColor.YELLOW },
-											{ "text-green ": color === CardColor.GREEN }
+											`text-${ color }`,
 										)
 									}/>
 									<span className={ classNames(
@@ -155,10 +159,14 @@ export const Exhibitors = () => {
 										</div>
 									</div>
 								</div>
-								<Link to="" className="group/link transition-colors font-bold flex w-full justify-end items-center gap-2">
-									Zobacz więcej
-									<ArrowIcon className="h-3 transition-colors group-hover/link:fill-green"/>
-								</Link>
+								{
+									link &&
+                                    <Link to={ link } className="group/link transition-colors font-bold flex w-full justify-end items-center gap-2">
+                                        Zobacz więcej
+                                        <ArrowIcon className="h-3 transition-colors group-hover/link:fill-green"/>
+                                    </Link>
+								}
+
 							</div>
 						</div>
 					) }
