@@ -21,7 +21,7 @@ export const ContactItem = ({ link, icon, label }: Props) =>
 				:
 				<div className="flex items-center gap-5">
 					<img src={ icon } alt="calendarIcon" className="h-8"/>
-					<div className="text-lg font-light">
+					<div className="text-lg font-medium">
 						{ label }
 					</div>
 				</div>
