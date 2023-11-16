@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Logo } from "components/util/Logo";
 import classNames from "classnames";
 import burgerIcon from "assets/hamburger.svg";
+import cloudIcon from "assets/cloud.svg";
+import sunIcon from "assets/sun.svg";
 import { HeaderItem } from "components/Header/HeaderItem";
 import { routes } from "utils/constants";
 
@@ -72,12 +74,45 @@ export const Header = () => {
 			<div
 				onClick={ () => toggleSidebarOpen(false) }
 				className={ classNames(
-					"fixed h-screen w-screen bg-black left-0 top-0 z-10 transition-opacity",
+					"fixed h-screen w-screen bg-blue-300 left-0 top-0 z-10 transition-opacity",
 					{ "opacity-0 pointer-events-none": !isSidebarOpen },
-					{ "opacity-50": isSidebarOpen },
+					{ "opacity-70": isSidebarOpen },
 				) }
 			>
 			</div>
+			<img
+				src={ cloudIcon }
+				alt="clouds"
+				className={ classNames(
+					"fixed top-0 left-0 h-[200px] z-20 scale-0",
+					{ "animate-cloud-popup-1": isSidebarOpen },
+				) }
+			/>
+			<img
+				src={ cloudIcon }
+				alt="clouds"
+				className={ classNames(
+					"fixed top-0 right-1/3 h-[200px] z-20 scale-0",
+					{ "animate-cloud-popup-2": isSidebarOpen },
+				) }
+			/>
+			<img
+				src={ cloudIcon }
+				alt="clouds"
+				className={ classNames(
+					"fixed top-8 left-24 h-[200px] z-40 scale-0",
+					{ "animate-cloud-popup-3": isSidebarOpen },
+				) }
+			/>
+			<img
+				src={ sunIcon }
+				alt="clouds"
+				className={ classNames(
+					"fixed top-0 left-20 h-[150px] z-30 scale-0",
+					{ "animate-sun-popup": isSidebarOpen },
+				) }
+			/>
+			{/* Sidebar backdrop */}
 		</header>
 	);
 }
