@@ -7,7 +7,6 @@ export const Map = () => {
 
 	const position = { lat: 49.97348888372594, lng: 19.828377211649432 }
 
-
 	return (
 		<MapContainer center={position} zoom={13}>
 			<TileLayer
