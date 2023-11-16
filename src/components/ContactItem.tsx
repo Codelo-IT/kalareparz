@@ -14,7 +14,7 @@ export const ContactItem = ({ link, icon, label }: Props) =>
 			isNotNull(link) ?
 				<Link className="flex items-center gap-5" to={ link }>
 					<img src={ icon } alt="calendarIcon" className="h-8"/>
-					<div className="text-lg font-light">
+					<div className="text-lg text-black font-light">
 						{ label }
 					</div>
 				</Link>
