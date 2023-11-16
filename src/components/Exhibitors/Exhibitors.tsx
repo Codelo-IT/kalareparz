@@ -161,7 +161,11 @@ export const Exhibitors = () => {
 								</div>
 								{
 									link &&
-                                    <Link to={ link } className="group/link transition-colors font-bold flex w-full justify-end items-center gap-2">
+                                    <Link
+                                        target="_blank"
+										to={ link }
+										className="group/link transition-colors font-bold flex w-full justify-end items-center gap-2"
+									>
                                         Zobacz więcej
                                         <ArrowIcon className="h-3 transition-colors group-hover/link:fill-green"/>
                                     </Link>
