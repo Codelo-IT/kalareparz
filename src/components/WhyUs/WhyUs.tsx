@@ -1,14 +1,7 @@
-import { EffectCards, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-cards";
 import { WhyUsTab } from "components/WhyUs/WhyUsTab";
-import { whyUsIndexToSvgDictionary, whyUsIndexToTabName } from "utils/dictionaries";
-import { Swiper as SwiperClass } from "swiper/types";
 import { useState } from "react";
-import appleImg from "assets/apples.jpg";
-import breadImg from "assets/bread.jpg";
-import hamImg from "assets/ham.jpg";
+import classNames from "classnames";
+import { WhyUsSlider } from "components/WhyUs/WhyUsSlider";
 
 export const NumberOfSlides = 3;
 
@@ -18,73 +11,34 @@ export const WhyUs = () => {
 
 	const [ activeIndex, setActiveIndex ] = useState<WhyUsTabsIndexes>(1);
 
-	const pagination = {
-		el: "#why-us-swiper-custom-pagination-wrapper",
-		renderBullet: (index: number, swiperClassNames?: string) => {
-			if (index >= NumberOfSlides) return "";
-			const image = whyUsIndexToSvgDictionary[ index as WhyUsTabsIndexes ];
-			const text = whyUsIndexToTabName[ index as WhyUsTabsIndexes ];
-			return (
-				'<div class="' + swiperClassNames + '">' +
-					image +
-					'<div class="text">' +
-						text +
-					'</div>' +
-				'</div>'
-			);
-		},
-		type: "bullets",
-		bulletClass: "swiper-custom-bullet",
-		bulletActiveClass: "swiper-custom-bullet-active",
-		clickable: true,
-	} ;
-
 	return (
 		<div>
 			<div
 				id="dlaczego-my"
-				className="container-wrapper w-100 flex justify-center h-[400px] mt-20"
+				className={ classNames(
+					"container-wrapper w-100 flex justify-center items-center mt-20 relative",
+					"h-auto sm:h-[350px] md:h-[450px] xl:h-[400px]",
+				) }
 			>
-				<div className="w-1/2 h-full flex items-center">
-					<Swiper
-						pagination={ pagination }
-						effect={'cards'}
-						grabCursor={true}
-						modules={[ EffectCards, Pagination ]}
-						onSlideChange={(swiper: SwiperClass) => setActiveIndex(swiper.activeIndex)}
-						className="why-us-swiper"
-					>
-						<SwiperSlide>
-							<img
-								src={ appleImg }
-								alt="single-slide"
-								className="absolute h-full w-full top-0 left-0 z-10 backdrop-filter object-cover"
-							/>
-						</SwiperSlide>
-						<SwiperSlide>
-							<img
-								src={ breadImg }
-								alt="single-slide"
-								className="absolute h-full w-full top-0 left-0 z-10 backdrop-filter object-cover"
-							/>
-						</SwiperSlide>
-						<SwiperSlide>
-							<img
-								src={ hamImg }
-								alt="single-slide"
-								className="absolute h-full w-full top-0 left-0 z-10 backdrop-filter object-cover"
-							/>
-						</SwiperSlide>
-					</Swiper>
+				<div className={ classNames(
+					"flex items-center",
+					"w-max md:w-1/2 h-[320px]",
+					"absolute md:static right-5 sm:right-10 top-10 md:top-20",
+					"h-[320px] md:h-full",
+				) }>
+					<WhyUsSlider setActiveSlideIndex={ slideIndex => setActiveIndex(slideIndex) }/>
 				</div>
-				<div className="w-1/2 h-full flex flex-col items-start justify-between">
+				<div className={ classNames(
+					"h-full flex flex-col items-start justify-between",
+					"w-full md:w-1/2",
+				) }>
 					{
 						activeIndex === 0 &&
                         <WhyUsTab
                             label="Jakość"
                             title="Jakość, na której możesz polegać"
                             description="Wybierając Kalareparz, stawiasz na niekwestionowaną jakość. Nasze naturalne produkty są uprawiane z dbałością o detale, bez sztucznych dodatków czy pestycydów. Każdy kęs to gwarancja, że podajesz swojej rodzinie jedzenie pełne naturalnego bogactwa i wartości odżywczych."
-                        />
+						/>
 					}
 					{
 						activeIndex === 1 &&
@@ -92,7 +46,7 @@ export const WhyUs = () => {
                             label="Dostępność"
                             title="Komfortowe Zakupy w Budynku"
                             description="Zapomnij o warunkach atmosferycznych podczas zakupów! Nasz targ to wyjątkowe miejsce, gdzie możesz cieszyć się zakupami w komfortowym budynku. Bez względu na pogodę, możesz swobodnie eksplorować różnorodność naszych produktów, chroniąc się przed deszczem czy słońcem."
-                        />
+						/>
 					}
 					{
 						activeIndex === 2 &&
@@ -100,11 +54,14 @@ export const WhyUs = () => {
                             label="Świeżość"
                             title="Świeżość Prosto z Gospodarstwa"
                             description="Kalareparz to gwarancja świeżości prosto z lokalnego gospodarstwa. Nasze produkty rolnicze są zbierane z najwyższą starannością, dzięki czemu masz pewność, że na Twoim stole znajduje się to, co najlepsze, pełne smaku i witamin."
-                        />
+						/>
 					}
 					<div
 						id="why-us-swiper-custom-pagination-wrapper"
-						className="flex gap-5 mt-10"
+						className={ classNames(
+							"flex gap-5",
+							"md:mt-10"
+						) }
 					></div>
 				</div>
 			</div>
