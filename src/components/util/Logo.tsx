@@ -12,11 +12,13 @@ export const Logo = ({ className }: Props) => {
 	}
 
 	return (
-		<img
-			src={ logo }
-			alt="Logo"
-			onClick={ onClick }
-			className={ classNames("cursor-pointer" ,className) }
-		/>
+		<a href="#">
+			<img
+				src={ logo }
+				alt="Logo"
+				onClick={ onClick }
+				className={ classNames("cursor-pointer" ,className) }
+			/>
+		</a>
 	)
 }
