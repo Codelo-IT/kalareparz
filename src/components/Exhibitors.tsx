@@ -89,14 +89,28 @@ export const Exhibitors = () => {
 				</div>
 				<div className="flex flex-col gap-20">
 					{ exhibitors.map(({ title, name, description, image, color }) =>
-						<div className="flex gap-10 justify-end items-center odd:flex-row-reverse even:ml-[200px] odd:mr-[200px]">
+						<div className={ classNames(
+							"flex gap-10 items-center",
+							"xl:odd:mr-[200px] xl:even:ml-[200px]",
+							"flex-col md:flex-row",
+							"justify-center md:justify-end",
+							"md:odd:flex-row-reverse"
+						) }>
 							<img
 								src={ image }
 								alt="single-exhibitor"
-								className="h-full min-h-[400px] object-cover overflow-hidden rounded-2xl w-3/5"
+								className={ classNames(
+									"h-full object-cover overflow-hidden rounded-2xl",
+									"w-1/2 lg:w-1/3 xl:w-3/5",
+									"min-h-[250px] md:min-h-[350px] xl:min-h-[400px]",
+									"hidden md:block"
+								) }
 							/>
-							<div className="w-2/5 flex flex-col gap-6 items-start">
-								<div className="flex items-center w-full gap-4 text-3xl font-bold text-black">
+							<div className={ classNames(
+								"flex flex-col gap-6 items-start",
+								"w-full md:w-1/2 lg:w-3/5 xl:w-2/5"
+							) }>
+								<div className="flex items-center w-full gap-4">
 									<CircleIcon className={
 										classNames("h-10 w-10",
 											{ "text-orange": color === CardColor.ORANGE },
@@ -104,14 +118,39 @@ export const Exhibitors = () => {
 											{ "text-green ": color === CardColor.GREEN }
 										)
 									}/>
-									{ title }
+									<span className={ classNames(
+										"whitespace-nowrap font-bold text-black",
+										"text-2xl lg:text-3xl"
+									) }>
+										{ title }
+									</span>
 								</div>
+								<img
+									src={ image }
+									alt="single-exhibitor"
+									className={ classNames(
+										"h-full object-cover overflow-hidden rounded-2xl",
+										"w-full",
+										"min-h-[150px] sm:min-h-[250px]",
+										"max-h-[150px] sm:max-h-[250px]",
+										"block md:hidden"
+									) }
+								/>
 								<div className={ classNames("flex gap-3 justify-between h-min rounded-2xl") }>
-									<div className="text-left pl-14">
-										<div className="text-2xl font-semibold text-black mb-4">
+									<div className={ classNames(
+										"text-left",
+										"md:pl-14"
+									) }>
+										<div className={ classNames(
+											"font-semibold text-black mb-4",
+											"text-xl lg:text-2xl",
+										) }>
 											{ name }
 										</div>
-										<div className="text-lg text-black font-light text-justify italic">
+										<div className={ classNames(
+											"text-black font-light text-justify italic",
+											"text-base lg:text-lg",
+										) }>
 											"{ description }"
 										</div>
 									</div>
