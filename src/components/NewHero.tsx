@@ -14,18 +14,18 @@ export const NewHero = () => {
 				<div className="flex flex-col justify-center items-center gap-4 z-10">
 					<span className={ classNames(
 						"text-green font-extrabold",
-						"text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl"
+						"text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-title"
 					) }>
 						Kalareparz
 					</span>
 					<span className={ classNames(
 						"font-medium text-center",
-						"text-xl sm:text-2xl lg:text-3xl xl:text4xl 2xl:text-5xl"
+						"text-black text-xl sm:text-2xl lg:text-3xl xl:text4xl 2xl:text-5xl"
 					) }>
 						Targ lokalnych płodów rolnych
 					</span>
 					<span className={ classNames(
-						"text-center mt-6",
+						"text-black text-center mt-6",
 						"text-xs sm:text-xs lg:text-base"
 					) }>
 						Nasze produkty rolnicze to nie tylko jedzenie,

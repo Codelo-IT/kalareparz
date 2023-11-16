@@ -32,7 +32,7 @@ export const Header = () => {
 					"hidden md:flex",
 					"gap-8 xl:gap-20",
 				) }>
-					<HeaderItem link="#onas" title="O nas"/>
+					<HeaderItem link="#o-nas" title="O nas"/>
 					<HeaderItem link="#wystawcy" title="Wystawcy"/>
 					<HeaderItem link="#dlaczego-my" title="Dlaczego my"/>
 					<HeaderItem link="#kontakt" title="Kontakt"/>

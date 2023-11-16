@@ -8,7 +8,7 @@ type Props = {
 
 export const HeaderItem = ({ link, title }: Props) =>
 	<a href={ link } className={ classNames(
-		"cursor-pointer transition hover:text-green tracking-wide",
+		"text-black cursor-pointer transition hover:text-green tracking-wide",
 		"text-lg xl:text-xl"
 	) }>
 		{ title }
