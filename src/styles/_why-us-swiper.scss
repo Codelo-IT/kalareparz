@@ -43,19 +43,11 @@
 		gap: 5px;
 		background-color: white;
         cursor: pointer;
-		transition: background-color 100ms ease-in, border-color 100ms ease-in;
+		transition: background-color 100ms ease-in, border-color 100ms ease-in, transform 100ms ease-in;
 
 		&:hover {
-			background-color: rgb(79,125,74);
 			border-color: rgb(79,125,74);
-
-			.text {
-				color: white;
-			}
-
-			svg {
-				fill: rgb(224,194,114);
-			}
+			transform: translateY(-3px);
 		}
 
 		svg {
@@ -76,6 +68,7 @@
 	.swiper-custom-bullet-active {
 		@extend .swiper-custom-bullet;
 		background-color: rgb(79,125,74);
+		border-color: rgb(79,125,74);
 
 		svg {
 			fill: rgb(224,194,114);
