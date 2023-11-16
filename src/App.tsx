@@ -1,5 +1,4 @@
-import { Header } from "components/Header";
-import { Hero } from "components/Hero";
+import { Header } from "components/Header/Header";
 import { Exhibitors } from "components/Exhibitors";
 import { Contact } from "components/Contact";
 import { Footer } from "components/Footer";

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Logo } from "components/Logo";
 import classNames from "classnames";
 import burgerIcon from "assets/hamburger.svg";
+import { HeaderItem } from "components/Header/HeaderItem";
 
 export const Header = () => {
 	const [ scrollPosition, setScrollPosition ] = useState<number>(0);
@@ -17,34 +18,29 @@ export const Header = () => {
 			classNames(
 				"w-screen fixed flex items-center z-50 text-xl transition duration-200",
 				"justify-end md:justify-center",
-				"px-10 md:px-0 py-5 md:py-10",
+				"h-[75px] md:h-[100px]",
 				{ "bg-white shadow-md": scrollPosition != 0 },
 			)
 		}>
-			<Logo className="absolute top-8 left-6"/>
+			<Logo className={ classNames(
+				"absolute top-5 left-6",
+				"h-24 lg:h-36"
+			) }/>
 			<div className="relative flex justify-center items-center gap-5">
 				<div className={ classNames(
 					"items-center",
 					"hidden md:flex",
-					"md:h-[75px] xl:h-[150px]"
+					"gap-8 xl:gap-20",
 				) }>
-					<a href="/#onas" className="cursor-pointer transition hover:text-green tracking-wide">
-						O nas
-					</a>
-					<a href="/#wystawcy" className="cursor-pointer transition hover:text-green tracking-wide">
-						Wystawcy
-					</a>
-					<a href="/#dlaczego-my" className="cursor-pointer transition hover:text-green tracking-wide">
-						Dlaczego my
-					</a>
-					<a href="/#kontakt" className="cursor-pointer transition hover:text-green tracking-wide">
-						Kontakt
-					</a>
+					<HeaderItem link="#onas" title="O nas"/>
+					<HeaderItem link="#wystawcy" title="Wystawcy"/>
+					<HeaderItem link="#dlaczego-my" title="Dlaczego my"/>
+					<HeaderItem link="#kontakt" title="Kontakt"/>
 				</div>
 				<img
 					src={ burgerIcon }
 					alt="="
-					className="block md:hidden h-5"
+					className="block md:hidden h-5 mr-10"
 				/>
 			</div>
 		</header>
