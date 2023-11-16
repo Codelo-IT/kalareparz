@@ -13,6 +13,7 @@ import linesBg from "assets/lines-bg.svg";
 import { CircleIcon } from "components/icons/CircleIcon";
 import { ExhibitorColor } from "utils/types/util.types";
 import { exhibitorTailwindColorToHEX } from "utils/dictionaries";
+import { SectionAnchor } from "components/util/SectionAnchor";
 
 type Exhibitor = {
 	title: string
@@ -76,7 +77,8 @@ export const Exhibitors = () => {
 	];
 
 	return (
-		<section id="wystawcy" className="relative mt-20 mb-20 ">
+		<section className="relative mt-20 mb-20">
+			<SectionAnchor id="wystawcy"/>
 			<img src={ dotsBg } className="absolute h-[100px] top-[50px] right-0 hidden xl:block" alt="background shape dots"/>
 			<img src={ wavesBg } className="absolute h-[60px] top-[1200px] -left-4 hidden xl:block" alt="background shape waves"/>
 			<img src={ linesBg } className="absolute h-[60px] top-[1750px] -right-4 hidden xl:block" alt="background shape lines"/>

@@ -5,13 +5,15 @@ import hamburgerIcon from "assets/hamburger.svg";
 import { useState } from "react";
 import { Map } from "components/util/Map";
 import { ContactItem } from "components/Contact/ContactItem";
+import { SectionAnchor } from "components/util/SectionAnchor";
 
 export const Contact = () => {
 
 	const [ isSidebarOpen, toggleSidebarOpen ] = useState(true);
 
 	return (
-		<section id="kontakt" className="container-wrapper mt-20">
+		<section className="container-wrapper mt-20 relative">
+			<SectionAnchor id="kontakt"/>
 			<div className="rounded-2xl overflow-hidden relative xl:h-[500px]">
 				<div
 					className="xl:absolute top-0 xl:w-[600px] xl:h-full flex flex-col gap-5 p-6 xl:p-10 z-20 rounded-l-2xl bg-light transition-all"
