@@ -11,20 +11,16 @@ import dotsBg from "assets/dots-bg.svg";
 import wavesBg from "assets/waves-bg.svg";
 import linesBg from "assets/lines-bg.svg";
 import { CircleIcon } from "components/icons/CircleIcon";
+import { ExhibitorColor } from "utils/types/util.types";
+import { exhibitorTailwindColorToHEX } from "utils/dictionaries";
 
 type Exhibitor = {
 	title: string
 	name: string
 	description: string
 	image: string
-	color: Color
+	color: ExhibitorColor
 	link?: string
-}
-
-enum Color {
-	GREEN = "green",
-	YELLOW = "yellow",
-	ORANGE = "orange"
 }
 
 export const Exhibitors = () => {
@@ -35,7 +31,7 @@ export const Exhibitors = () => {
 			name: "Gospodarstwo Gorzkowscy",
 			description: "Jesteśmy gospodarstwem typowo rodzinnym, skupiamy się przede wszystkim na tradycyjnej uprawie warzyw sezonowych, okopowych i kiszonkach. Sprzedajemy tylko i wyłącznie to, co uda nam się wyprodukować, więc nie znajdziecie u nas w grudniu pomidorów czy ogórków, a wiosną kalafiora. Zdrowo, sezonowo i tradycyjnie to motto naszego gospodarstwa.",
 			image: vegetablesImage,
-			color: Color.GREEN,
+			color: ExhibitorColor.GREEN,
 			link: "https://www.facebook.com/profile.php?id=100083366910828"
 		},
 		{
@@ -43,7 +39,7 @@ export const Exhibitors = () => {
 			name: "„GAWOR” - Szczepan Gawor",
 			description: "Oferujemy produkty tradycyjne, o prostym składzie (zazwyczaj jest to tylko mięso, sól oraz przyprawy), z polskiego lokalnego mięsa (z małych tradycyjnych hodowli). Produkty te są w wędzone tradycyjnie w wędzarni opalanej drewnem.",
 			image: hamImage,
-			color: Color.YELLOW,
+			color: ExhibitorColor.YELLOW,
 			link: "https://www.gaworwedliny.pl/"
 		},
 		{
@@ -51,7 +47,7 @@ export const Exhibitors = () => {
 			name: "Tłocznia Pawłowscy - Antoni Pawłowski",
 			description: "Intensywny, bogaty smak naszych soków jest naszą pasją, którą z radością dzielimy się z Państwem!",
 			image: appleJuiceImage,
-			color: Color.ORANGE,
+			color: ExhibitorColor.ORANGE,
 			link: "http://www.sokipawlowski.pl/"
 		},
 		{
@@ -59,7 +55,7 @@ export const Exhibitors = () => {
 			name: "Kozie Frykasy - Maciej Dybowski",
 			description: "Wśród wyrobów pochodzących z naszego ekologicznego gospodarstwa \"Kozie Frykasy\" znaleźć można takie przysmaki jak: bundz, bundz wędzony, jogurt, kefir, świeże mleko, sery pleśniowe, długodojrzewające oraz nasze specjały- sery w zalewie, twarożki, fetę, halumi czy nawet 2 letni parmezan, rikotta i słynne już \"Koscypki\". Oczywiście wszystkie wyroby powstają wyłącznie ze świeżego, niepasteryzowanego koziego mleka.",
 			image: cheeseImage,
-			color: Color.GREEN,
+			color: ExhibitorColor.GREEN,
 			link: "https://www.facebook.com/koziefrykasy"
 		},
 		{
@@ -67,7 +63,7 @@ export const Exhibitors = () => {
 			name: "Dobra Natura - Stefan Wójcicki",
 			description: "Rośliny, z których jest tłoczony olej dobierane są z ogromną uwagą i pochodzą jedynie od sprawdzonych dostawców.",
 			image: oilImage,
-			color: Color.YELLOW,
+			color: ExhibitorColor.YELLOW,
 			link: "https://www.facebook.com/profile.php?id=100064221603668"
 		},
 		{
@@ -75,7 +71,7 @@ export const Exhibitors = () => {
 			name: "Monika Kadela",
 			description: "Najpopularniejszym produktem jest chleb pszenno – żytni, może być z dodatkami, takimi jak np. czarnuszka oraz ciasta, które przygotowywane są według tradycyjnych pilnie strzeżonych przepisów. Wszystko z miłością do jakości i zadowolonych klientów.",
 			image: breadImage,
-			color: Color.ORANGE
+			color: ExhibitorColor.ORANGE
 		}
 	];
 
@@ -120,11 +116,10 @@ export const Exhibitors = () => {
 								"w-full md:w-1/2 lg:w-3/5 xl:w-2/5"
 							) }>
 								<div className="flex items-center w-full gap-4">
-									<CircleIcon className={
-										classNames("h-10 w-10",
-											`text-${ color }`,
-										)
-									}/>
+									<CircleIcon
+										className="h-10 w-10"
+										style={ { color: exhibitorTailwindColorToHEX[ color ] } }
+									/>
 									<span className={ classNames(
 										"whitespace-nowrap font-bold text-black",
 										"text-2xl lg:text-3xl"

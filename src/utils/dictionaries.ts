@@ -1,4 +1,4 @@
-import { EnumDictionary } from "utils/types/util.types";
+import { EnumDictionary, ExhibitorColor } from "utils/types/util.types";
 import { WhyUsTabsIndexes } from "components/WhyUs/WhyUs";
 
 export const whyUsIndexToSvgDictionary: EnumDictionary<WhyUsTabsIndexes, string> = {
@@ -11,4 +11,10 @@ export const whyUsIndexToTabName: EnumDictionary<WhyUsTabsIndexes, string> = {
 	[ 0 ]: "Jakość",
 	[ 1 ]: "Dostępność",
 	[ 2 ]: "Świeżość",
+}
+
+export const exhibitorTailwindColorToHEX: EnumDictionary<ExhibitorColor, string> = {
+	[ ExhibitorColor.GREEN ]: "#699969",
+	[ ExhibitorColor.YELLOW ]: "#e0c372",
+	[ ExhibitorColor.ORANGE ]: "#d66542",
 }
