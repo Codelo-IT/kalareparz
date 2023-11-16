@@ -12,7 +12,7 @@ export const Logo = ({ className }: Props) => {
 	}
 
 	return (
-		<a href="#">
+		<a href="/#">
 			<img
 				src={ logo }
 				alt="Logo"
