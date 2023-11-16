@@ -19,7 +19,7 @@ export const Header = () => {
 				"w-screen fixed flex items-center z-50 text-xl transition duration-200",
 				"justify-end md:justify-center",
 				"h-[75px] md:h-[100px]",
-				{ "bg-white shadow-md": scrollPosition != 0 },
+				{ "bg-white shadow-md": scrollPosition !== 0 },
 			)
 		}>
 			<Logo className={ classNames(
