@@ -41,7 +41,10 @@ export const WhyUs = () => {
 
 	return (
 		<div>
-			<div className="container-wrapper w-100 flex justify-center h-[400px] mt-20">
+			<div
+				id="dlaczego-my"
+				className="container-wrapper w-100 flex justify-center h-[400px] mt-20"
+			>
 				<div className="w-1/2 h-full flex items-center">
 					<Swiper
 						pagination={ pagination }
