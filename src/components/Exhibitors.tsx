@@ -75,9 +75,9 @@ export const Exhibitors = () => {
 
 	return (
 		<section id="wystawcy" className="relative mt-20 mb-20 ">
-			<img src={ dotsBg } className="absolute h-[100px] top-[50px] right-0" alt="background shape dots"/>
-			<img src={ wavesBg } className="absolute h-[60px] top-[1200px] -left-4" alt="background shape waves"/>
-			<img src={ linesBg } className="absolute h-[60px] top-[2000px] -right-4" alt="background shape lines"/>
+			<img src={ dotsBg } className="absolute h-[100px] top-[50px] right-0 hidden xl:block" alt="background shape dots"/>
+			<img src={ wavesBg } className="absolute h-[60px] top-[1200px] -left-4 hidden xl:block" alt="background shape waves"/>
+			<img src={ linesBg } className="absolute h-[60px] top-[1750px] -right-4 hidden xl:block" alt="background shape lines"/>
 			<div className="container-wrapper flex flex-col items-center text-center gap-16">
 				<div className="flex flex-col gap-5">
 					<div className="text-5xl text-black font-semibold">
