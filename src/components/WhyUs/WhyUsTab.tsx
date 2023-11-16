@@ -35,7 +35,7 @@ export const WhyUsTab = ({
 			"w-2/3 sm:w-1/2 md:w-full",
 			"my-10 md:mt-10 md:mb-0",
 			"pr-10 md:pr-0",
-			"text-sm sm:text-base md:text-lg"
+			"text-sm md:text-base lg:text-lg"
 		) }>
 			{ description }
 		</div>
