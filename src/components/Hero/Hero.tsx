@@ -8,7 +8,7 @@ import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import "swiper/css/effect-fade";
-import { SingleSlide } from "components/SingleSlide";
+import { SingleSlide } from "components/Hero/SingleSlide";
 
 export const Hero = () => {
 

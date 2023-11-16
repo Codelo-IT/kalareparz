@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Logo } from "components/Logo";
+import { Logo } from "components/util/Logo";
 import classNames from "classnames";
 import burgerIcon from "assets/hamburger.svg";
 import { HeaderItem } from "components/Header/HeaderItem";
+import { routes } from "utils/constants";
 
 export const Header = () => {
 	const [ scrollPosition, setScrollPosition ] = useState<number>(0);
@@ -32,10 +33,15 @@ export const Header = () => {
 					"hidden md:flex",
 					"gap-8 xl:gap-20",
 				) }>
-					<HeaderItem link="#o-nas" title="O nas"/>
-					<HeaderItem link="#wystawcy" title="Wystawcy"/>
-					<HeaderItem link="#dlaczego-my" title="Dlaczego my"/>
-					<HeaderItem link="#kontakt" title="Kontakt"/>
+					{
+						routes.map(({ name, link }, index) =>
+							<HeaderItem
+								key={ index }
+								link={ link }
+								title={ name }
+							/>
+						)
+					}
 				</div>
 				<img
 					src={ burgerIcon }

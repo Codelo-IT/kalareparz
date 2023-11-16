@@ -3,8 +3,8 @@ import clockIcon from "assets/clock.svg";
 import locationIcon from "assets/location.svg";
 import hamburgerIcon from "assets/hamburger.svg";
 import { useState } from "react";
-import { Map } from "components/Map";
-import { ContactItem } from "components/ContactItem";
+import { Map } from "components/util/Map";
+import { ContactItem } from "components/Contact/ContactItem";
 
 export const Contact = () => {
 

@@ -1,7 +1,7 @@
 import grass from "assets/grass.svg";
-import { FOOTER_GRASS_WIDTH } from "utils/constants";
+import { FOOTER_GRASS_WIDTH, routes } from "utils/constants";
 import { useScreenSize } from "utils/hooks/useScreenSize";
-import { ContentWrapper } from "components/ContentWrapper";
+import { ContentWrapper } from "components/util/ContentWrapper";
 import calendarFilledIcon from "assets/calendar-filled.svg";
 import timeFilledIcon from "assets/time-filled.svg";
 import locationFilledIcon from "assets/location-filled.svg";
@@ -12,10 +12,10 @@ import horseIcon from "assets/horse.svg";
 import oboraIcon from "assets/obora.svg";
 import treeIcon from "assets/tree.svg";
 import caravanIcon from "assets/caravan.svg";
-import { FooterItem } from "components/FooterItem";
-import { FooterTitle } from "components/FooterTitle";
-import { Link } from "components/Link";
-import { Logo } from "components/Logo";
+import { FooterItem } from "components/Footer/FooterItem";
+import { FooterTitle } from "components/Footer/FooterTitle";
+import { Link } from "components/util/Link";
+import { Logo } from "components/util/Logo";
 import { FacebookIcon } from "components/icons/FacebookIcon";
 import React from "react";
 import { InstagramIcon } from "components/icons/InstagramIcon";
@@ -81,9 +81,15 @@ export const Footer = () => {
 					<FooterTitle>
 						Przejdź do
 					</FooterTitle>
-					<FooterItem name="O nas" link="/#onas"/>
-					<FooterItem name="Wystawcy" link="/#wystawcy"/>
-					<FooterItem name="Kontakt" link="/#kontakt"/>
+					{
+						routes.map(({ name, link }, index) =>
+							<FooterItem
+								key={ index }
+								name={ name }
+								link={ link }
+							/>
+						)
+					}
 				</div>
 			</ContentWrapper>
 		</footer>

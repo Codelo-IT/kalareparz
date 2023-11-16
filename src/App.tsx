@@ -1,10 +1,9 @@
 import { Header } from "components/Header/Header";
-import { Exhibitors } from "components/Exhibitors";
-import { Contact } from "components/Contact";
-import { Footer } from "components/Footer";
-import { AboutUs } from "components/AboutUs";
-import { GoodQuality } from "components/GoodQuality";
-import { NewHero } from "components/NewHero";
+import { Exhibitors } from "components/Exhibitors/Exhibitors";
+import { Contact } from "components/Contact/Contact";
+import { Footer } from "components/Footer/Footer";
+import { GoodQuality } from "components/GoodQuality/GoodQuality";
+import { NewHero } from "components/Hero/NewHero";
 import { WhyUs } from "components/WhyUs/WhyUs";
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
 		<>
 			<Header/>
 			<NewHero/>
-			<AboutUs/>
 			<Exhibitors/>
 			<GoodQuality/>
 			<WhyUs/>
