@@ -6,7 +6,10 @@ import { HeaderItem } from "components/Header/HeaderItem";
 import { routes } from "utils/constants";
 
 export const Header = () => {
+
 	const [ scrollPosition, setScrollPosition ] = useState<number>(0);
+
+	const [ isSidebarOpen, toggleSidebarOpen ] = useState(false);
 
 	useEffect(() => {
 		window.addEventListener('scroll', () => {
@@ -33,21 +36,47 @@ export const Header = () => {
 					"hidden md:flex",
 					"gap-8 xl:gap-20",
 				) }>
-					{
-						routes.map(({ name, link }, index) =>
-							<HeaderItem
-								key={ index }
-								link={ link }
-								title={ name }
-							/>
-						)
-					}
+					{ routes.map(({ name, link }, index) =>
+						<HeaderItem
+							key={ index }
+							link={ link }
+							title={ name }
+						/>
+					) }
 				</div>
 				<img
 					src={ burgerIcon }
 					alt="="
-					className="block md:hidden h-5 mr-10"
+					className="block md:hidden h-5 mr-10 relative z-50 cursor-pointer"
+					onClick={ () => {toggleSidebarOpen(isOpen => !isOpen);} }
 				/>
+			</div>
+
+			{/* Sidebar */}
+			<div className={ classNames(
+				"absolute w-[300px] flex flex-col gap-5 transition-all bg-white top-0 pt-20 p-10 h-screen shadow-2xl z-40",
+				{ "right-[-300px]": !isSidebarOpen },
+				{ "right-0": isSidebarOpen },
+			) }>
+				{ routes.map(({ name, link }, index) =>
+					<HeaderItem
+						key={ index }
+						link={ link }
+						title={ name }
+						onClick={ () => toggleSidebarOpen(false) }
+					/>
+				) }
+			</div>
+
+			{/* Sidebar backdrop */}
+			<div
+				onClick={ () => toggleSidebarOpen(false) }
+				className={ classNames(
+					"fixed h-screen w-screen bg-black left-0 top-0 z-10 transition-opacity",
+					{ "opacity-0 pointer-events-none": !isSidebarOpen },
+					{ "opacity-50": isSidebarOpen },
+				) }
+			>
 			</div>
 		</header>
 	);
