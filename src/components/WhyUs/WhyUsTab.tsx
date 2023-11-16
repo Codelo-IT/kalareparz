@@ -1,4 +1,5 @@
 import wheatIcon from "assets/wheat.svg";
+import classNames from "classnames";
 
 type Props = {
 	label: string
@@ -12,10 +13,16 @@ export const WhyUsTab = ({
 	description,
 }: Props) =>
 	<div className="flex flex-col">
-		<div className="text-darkGreen text-sm">
+		<div className={ classNames(
+			"text-darkGreen",
+			"text-xs md:text-sm"
+		) }>
 			{ label }
 		</div>
-		<div className="text-black uppercase font-title text-3xl">
+		<div className={ classNames(
+			"text-black uppercase font-title",
+			"text-2xl xl:text-3xl"
+		) }>
 			{ title }
 		</div>
 		<img
@@ -23,7 +30,13 @@ export const WhyUsTab = ({
 			alt="wheatIcon"
 			className="w-5"
 		/>
-		<div className="text-gray-500 font-light text-lg mt-10">
+		<div className={ classNames(
+			"text-gray-500 font-light mt-10",
+			"w-2/3 sm:w-1/2 md:w-full",
+			"my-10 md:mt-10 md:mb-0",
+			"pr-10 md:pr-0",
+			"text-sm sm:text-base md:text-lg"
+		) }>
 			{ description }
 		</div>
 	</div>
