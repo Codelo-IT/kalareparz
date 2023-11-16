@@ -100,7 +100,7 @@ export const Header = () => {
 				src={ cloudIcon }
 				alt="clouds"
 				className={ classNames(
-					"fixed top-8 left-24 h-[200px] z-40 scale-0",
+					"fixed top-8 left-24 h-[200px] z-20 sm:z-40 scale-0",
 					{ "animate-cloud-popup-3": isSidebarOpen },
 				) }
 			/>
