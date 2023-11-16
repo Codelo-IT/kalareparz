@@ -1,5 +1,5 @@
 import grass from "assets/grass.svg";
-import { FOOTER_GRASS_WIDTH, routes } from "utils/constants";
+import { FOOTER_GRASS_WIDTH, mail, phone, routes } from "utils/constants";
 import { useScreenSize } from "utils/hooks/useScreenSize";
 import { ContentWrapper } from "components/util/ContentWrapper";
 import calendarFilledIcon from "assets/calendar-filled.svg";
@@ -58,8 +58,8 @@ export const Footer = () => {
 					<FooterTitle>
 						Kontakt
 					</FooterTitle>
-					<FooterItem icon={ phoneFilledIcon } name="123 123 123"/>
-					<FooterItem icon={ mailFilledIcon } name="kalareparz@gmail.com"/>
+					<FooterItem icon={ phoneFilledIcon } name={ phone }/>
+					<FooterItem icon={ mailFilledIcon } name={ mail }/>
 					<div className="flex items-center gap-3 mt-2">
 						<Link className="flex text-brown items-center" to="https://www.facebook.com/kalareparz">
 							<FacebookIcon className="h-8 w-8 transition-colors"/>
