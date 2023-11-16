@@ -94,14 +94,17 @@ export const Exhibitors = () => {
 					</div>
 				</div>
 				<div className="flex flex-col gap-20">
-					{ exhibitors.map(({ title, name, description, image, color, link }) =>
-						<div className={ classNames(
-							"flex gap-10 items-center",
-							"xl:odd:mr-[200px] xl:even:ml-[200px]",
-							"flex-col md:flex-row",
-							"justify-center md:justify-end",
-							"md:odd:flex-row-reverse"
-						) }>
+					{ exhibitors.map(({ title, name, description, image, color, link }, index) =>
+						<div
+							key={ index }
+							className={ classNames(
+								"flex gap-10 items-center",
+								"xl:odd:mr-[200px] xl:even:ml-[200px]",
+								"flex-col md:flex-row",
+								"justify-center md:justify-end",
+								"md:odd:flex-row-reverse"
+							) }
+						>
 							<img
 								src={ image }
 								alt="single-exhibitor"

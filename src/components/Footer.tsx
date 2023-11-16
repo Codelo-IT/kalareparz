@@ -28,14 +28,15 @@ export const Footer = () => {
 	const Grass = () =>
 		<>{new Array(Math.ceil(width / FOOTER_GRASS_WIDTH * 1.10)).fill("").map((_, index) =>
 			<img
-			src={ grass }
-			alt="grass"
-			className="absolute top-[-30px] z-10"
-			style={ {
-				width: FOOTER_GRASS_WIDTH,
-				left: index * (FOOTER_GRASS_WIDTH * 0.94),
-			} }
-		/>
+				key={ index }
+				src={ grass }
+				alt="grass"
+				className="absolute top-[-30px] z-10"
+				style={ {
+					width: FOOTER_GRASS_WIDTH,
+					left: index * (FOOTER_GRASS_WIDTH * 0.94),
+				} }
+			/>
 	)}</>
 
 	return (
