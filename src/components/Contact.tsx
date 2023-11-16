@@ -14,7 +14,7 @@ export const Contact = () => {
 		<section id="kontakt" className="container-wrapper relative mt-20 h-[500px] rounded-2xl overflow-hidden">
 			<div
 				className="absolute top-0 w-[600px] h-full flex flex-col gap-5 p-10 z-20 rounded-l-2xl rounded-b-2xl bg-light transition-all"
-				style={ { left: isSidebarOpen ? 0 : -600 } }
+				style={ { left: isSidebarOpen ? 0 : -568 } }
 			>
 				<div
 					className="absolute top-5 -right-8 bg-light p-2 rounded-r cursor-pointer"
