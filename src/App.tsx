@@ -5,6 +5,9 @@ import { Footer } from "components/Footer/Footer";
 import { GoodQuality } from "components/GoodQuality/GoodQuality";
 import { NewHero } from "components/Hero/NewHero";
 import { WhyUs } from "components/WhyUs/WhyUs";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-0SFCVGSR02");
 
 function App() {
 	return (
