@@ -8,6 +8,7 @@ import { WhyUs } from "components/WhyUs/WhyUs";
 import ReactGA from "react-ga4";
 
 ReactGA.initialize("G-0SFCVGSR02");
+ReactGA.send(window.location.pathname);
 
 function App() {
 	return (
