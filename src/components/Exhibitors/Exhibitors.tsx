@@ -1,5 +1,9 @@
 import appleJuiceImage from "assets/apple-juice.jpg";
 import breadImage from "assets/bread-2.jpg";
+import kaliccy from "assets/pasieka-kaliccy.jpeg";
+import oscypek from "assets/oscypek.jpeg";
+import dobraNaturaOleje from "assets/dobra-natura-oleje.jpeg";
+import serkiMalgorzaty from "assets/serki-malgorzaty-krowie.jpeg";
 import cheeseImage from "assets/cheese.jpg";
 import hamImage from "assets/ham-2.jpg";
 import oilImage from "assets/oil.jpg";
@@ -73,7 +77,35 @@ export const Exhibitors = () => {
 			description: "Najpopularniejszym produktem jest chleb pszenno – żytni, może być z dodatkami, takimi jak np. czarnuszka oraz ciasta, które przygotowywane są według tradycyjnych pilnie strzeżonych przepisów. Wszystko z miłością do jakości i zadowolonych klientów.",
 			image: breadImage,
 			color: ExhibitorColor.ORANGE
-		}
+		},
+		{
+			title: "Miody",
+			name: "Pasieka Kaliccy",
+			description: "Naszą pasiekę – bo pszczelarzymy razem z moją żoną Iwoną – założyliśmy w 2019r. Zakupiliśmy pierwszą rodzinę pszczelą i zaczęliśmy naukę. Był pierwszy odkład, pierwsze znakowanie matek, pierwsze małe miodobranie i wielka radość z uzyskanego efektu.",
+			image: kaliccy,
+			color: ExhibitorColor.YELLOW
+		},
+		{
+			title: "Oscypki",
+			name: "Gospodarstwo Państwa Bobak",
+			description: "Odkryj wyjątkowy smak serów Gospodarstwa Państwa Bobak! Nasze tradycyjne oscypki to mistrzostwo w każdym kęsie. Dbamy o każdy detal, od jakości mleka po unikalne receptury. Zasmakuj prawdziwej pasji do serowarstwa. Jakość, tradycja i wyjątkowy smak - to nasza recepta na doskonałość!",
+			image: oscypek,
+			color: ExhibitorColor.GREEN,
+		},
+		{
+			title: "Oleje tłoczone na zimno",
+			name: "Dobra Natura",
+			description: "Oleje tłoczone na zimno. To mała tłocznia produkująca pod zamówienia, dlatego olej jest zawsze świeży. Ziarna do produkcji starannie dobierane z własnego źródła lub bezpośrednio od innych rolników, bez chemii, oprysków itp.",
+			image: dobraNaturaOleje,
+			color: ExhibitorColor.YELLOW,
+		},
+		{
+			title: "Serki z mleka krowiego",
+			name: "Serki Małgorzaty ",
+			description: "Odkryj niepowtarzalny smak świeżych serków krowich. Wyprodukowane z pasją na polskich pastwiskach, gwarantują autentyczność i delikatność. Raz spróbujesz, a zakochasz się w świeżości i wyjątkowym smaku prawdziwego, polskiego sera. Wspieraj lokalnych producentów i ciesz się serowym raju z \"Serkami Małgorzaty\"",
+			image: serkiMalgorzaty,
+			color: ExhibitorColor.GREEN,
+		},
 	];
 
 	return (
