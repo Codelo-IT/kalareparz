@@ -101,7 +101,7 @@ export const Exhibitors = () => {
 		},
 		{
 			title: "Serki z mleka krowiego",
-			name: "Serki Małgorzaty ",
+			name: "Serki Małgorzaty",
 			description: "Odkryj niepowtarzalny smak świeżych serków krowich. Wyprodukowane z pasją na polskich pastwiskach, gwarantują autentyczność i delikatność. Raz spróbujesz, a zakochasz się w świeżości i wyjątkowym smaku prawdziwego, polskiego sera. Wspieraj lokalnych producentów i ciesz się serowym raju z \"Serkami Małgorzaty\"",
 			image: serkiMalgorzaty,
 			color: ExhibitorColor.GREEN,
