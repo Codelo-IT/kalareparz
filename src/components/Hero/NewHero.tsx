@@ -1,5 +1,6 @@
 import backgroundPhoto from "assets/hero-background.jpg";
 import classNames from "classnames";
+import { CircleAlert } from "lucide-react";
 
 export const NewHero = () => {
 
@@ -32,6 +33,13 @@ export const NewHero = () => {
 						to kawałek naszej ziemi, owoc pracy lokalnych rolników.
 						Zasmakuj lokalności, wspieraj rolników i delektuj się prawdziwym smakiem!
 					</span>
+				</div>
+
+				<div className="flex items-center flex-col md:flex-row text-center max-w-max mx-auto gap-4 px-3 md:px-5 py-3 rounded mt-10 bg-[#F95959] text-white">
+					<CircleAlert className="min-w-[30px]  md:min-w-[40px]"/>
+					<div className="text-base md:text-xl">
+						W dniu 07.09.2024 stoisko z Wędlinami czynne do godziny 11:45!
+					</div>
 				</div>
 			</div>
 		</section>
