@@ -1,12 +1,7 @@
 import appleJuiceImage from "assets/apple-juice.jpg";
 import breadImage from "assets/bread-2.jpg";
 import kaliccy from "assets/pasieka-kaliccy.jpeg";
-import oscypek from "assets/oscypek.jpeg";
-import dobraNaturaOleje from "assets/dobra-natura-oleje.jpeg";
-import serkiMalgorzaty from "assets/serki-malgorzaty-krowie.jpeg";
-import cheeseImage from "assets/cheese.jpg";
 import hamImage from "assets/ham-2.jpg";
-import oilImage from "assets/oil.jpg";
 import vegetablesImage from "assets/vegetables.jpg";
 import classNames from "classnames";
 import { Link } from "components/util/Link";
@@ -14,6 +9,7 @@ import { ArrowIcon } from "components/util/ArrowIcon";
 import dotsBg from "assets/dots-bg.svg";
 import wavesBg from "assets/waves-bg.svg";
 import linesBg from "assets/lines-bg.svg";
+import coffee from "assets/coffe.jpg";
 import { CircleIcon } from "components/icons/CircleIcon";
 import { ExhibitorColor } from "utils/types/util.types";
 import { exhibitorTailwindColorToHEX } from "utils/dictionaries";
@@ -56,20 +52,11 @@ export const Exhibitors = () => {
 			link: "http://www.sokipawlowski.pl/"
 		},
 		{
-			title: "Nabiał kozi",
-			name: "Kozie Frykasy - Maciej Dybowski",
-			description: "Wśród wyrobów pochodzących z naszego ekologicznego gospodarstwa \"Kozie Frykasy\" znaleźć można takie przysmaki jak: bundz, bundz wędzony, jogurt, kefir, świeże mleko, sery pleśniowe, długodojrzewające oraz nasze specjały- sery w zalewie, twarożki, fetę, halumi czy nawet 2 letni parmezan, rikotta i słynne już \"Koscypki\". Oczywiście wszystkie wyroby powstają wyłącznie ze świeżego, niepasteryzowanego koziego mleka.",
-			image: cheeseImage,
-			color: ExhibitorColor.GREEN,
-			link: "https://www.facebook.com/koziefrykasy"
-		},
-		{
-			title: "Oleje tłoczone na zimno",
-			name: "Dobra Natura - Stefan Wójcicki",
-			description: "Rośliny, z których jest tłoczony olej dobierane są z ogromną uwagą i pochodzą jedynie od sprawdzonych dostawców.",
-			image: oilImage,
-			color: ExhibitorColor.YELLOW,
-			link: "https://www.facebook.com/profile.php?id=100064221603668"
+			title: "Miody",
+			name: "Pasieka Kaliccy",
+			description: "Naszą pasiekę – bo pszczelarzymy razem z moją żoną Iwoną – założyliśmy w 2019r. Zakupiliśmy pierwszą rodzinę pszczelą i zaczęliśmy naukę. Był pierwszy odkład, pierwsze znakowanie matek, pierwsze małe miodobranie i wielka radość z uzyskanego efektu.",
+			image: kaliccy,
+			color: ExhibitorColor.YELLOW
 		},
 		{
 			title: "Wypieki",
@@ -79,32 +66,12 @@ export const Exhibitors = () => {
 			color: ExhibitorColor.ORANGE
 		},
 		{
-			title: "Miody",
-			name: "Pasieka Kaliccy",
-			description: "Naszą pasiekę – bo pszczelarzymy razem z moją żoną Iwoną – założyliśmy w 2019r. Zakupiliśmy pierwszą rodzinę pszczelą i zaczęliśmy naukę. Był pierwszy odkład, pierwsze znakowanie matek, pierwsze małe miodobranie i wielka radość z uzyskanego efektu.",
-			image: kaliccy,
-			color: ExhibitorColor.YELLOW
-		},
-		{
-			title: "Oscypki",
-			name: "Gospodarstwo Państwa Bobak",
-			description: "Odkryj wyjątkowy smak serów Gospodarstwa Państwa Bobak! Nasze tradycyjne oscypki to mistrzostwo w każdym kęsie. Dbamy o każdy detal, od jakości mleka po unikalne receptury. Zasmakuj prawdziwej pasji do serowarstwa. Jakość, tradycja i wyjątkowy smak - to nasza recepta na doskonałość!",
-			image: oscypek,
-			color: ExhibitorColor.GREEN,
-		},
-		{
-			title: "Oleje tłoczone na zimno",
-			name: "Dobra Natura",
-			description: "Oleje tłoczone na zimno. To mała tłocznia produkująca pod zamówienia, dlatego olej jest zawsze świeży. Ziarna do produkcji starannie dobierane z własnego źródła lub bezpośrednio od innych rolników, bez chemii, oprysków itp.",
-			image: dobraNaturaOleje,
+			title: "Kawa",
+			name: "Kawa Mundonovo",
+			description: "Od zawsze wolałem kawę niż herbatę i podczas różnych wyjazdów odkrywałem nowe smaki. Kilkanaście lat temu trafiłem do nieistniejącej już czekoladziarni \"Czarna Mamba\" w Kołobrzegu, gdzie zasmakowałem kawy Mundo Novo. To zainspirowało mnie do zgłębiania wiedzy o kawie. Uczę się od doświadczonych baristów i testuję różne metody parzenia. Kawa w moim sklepie to starannie wyselekcjonowane ziarna segmentu speciality, a ja chętnie doradzę w ich wyborze.",
+			image: coffee,
 			color: ExhibitorColor.YELLOW,
-		},
-		{
-			title: "Serki z mleka krowiego",
-			name: "Serki Małgorzaty",
-			description: "Odkryj niepowtarzalny smak świeżych serków krowich. Wyprodukowane z pasją na polskich pastwiskach, gwarantują autentyczność i delikatność. Raz spróbujesz, a zakochasz się w świeżości i wyjątkowym smaku prawdziwego, polskiego sera. Wspieraj lokalnych producentów i ciesz się serowym raju z \"Serkami Małgorzaty\"",
-			image: serkiMalgorzaty,
-			color: ExhibitorColor.GREEN,
+			link: "https://mundonovo.pl/",
 		},
 	];
 
