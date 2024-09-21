@@ -11,17 +11,17 @@ ReactGA.initialize("G-0SFCVGSR02");
 ReactGA.send(window.location.pathname);
 
 function App() {
-	return (
-		<>
-			<Header/>
-			<NewHero/>
-			<Exhibitors/>
-			<GoodQuality/>
-			<WhyUs/>
-			<Contact/>
-			<Footer/>
-		</>
-	);
+    return (
+        <>
+            <Header />
+            <NewHero />
+            <Exhibitors />
+            <GoodQuality />
+            <WhyUs />
+            <Contact />
+            <Footer />
+        </>
+    );
 }
 
 export default App;

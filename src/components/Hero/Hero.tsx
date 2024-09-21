@@ -11,33 +11,32 @@ import "swiper/css/effect-fade";
 import { SingleSlide } from "components/Hero/SingleSlide";
 
 export const Hero = () => {
-
-	return (
-		<Swiper
-			className="h-[60vh] w-full !pt-[128px]"
-			effect="fade"
-			modules={ [ Navigation, Pagination, A11y, EffectFade, Autoplay ] }
-			loop
-			autoplay={{ delay: 3000, }}
-		>
-			<SwiperSlide>
-				<SingleSlide
-					title=""
-					image={ hamImage }
-				/>
-			</SwiperSlide>
-			<SwiperSlide>
-				<SingleSlide
-					title="Pierwszy w okolicy targ lokalnych płodów rolnych"
-					image={ applesImage }
-				/>
-			</SwiperSlide>
-			<SwiperSlide>
-				<SingleSlide
-					title="Chleb"
-					image={ breadImage }
-				/>
-			</SwiperSlide>
-		</Swiper>
-	)
-}
+    return (
+        <Swiper
+            className="h-[60vh] w-full !pt-[128px]"
+            effect="fade"
+            modules={[Navigation, Pagination, A11y, EffectFade, Autoplay]}
+            loop
+            autoplay={{ delay: 3000 }}
+        >
+            <SwiperSlide>
+                <SingleSlide
+                    title=""
+                    image={hamImage}
+                />
+            </SwiperSlide>
+            <SwiperSlide>
+                <SingleSlide
+                    title="Pierwszy w okolicy targ lokalnych płodów rolnych"
+                    image={applesImage}
+                />
+            </SwiperSlide>
+            <SwiperSlide>
+                <SingleSlide
+                    title="Chleb"
+                    image={breadImage}
+                />
+            </SwiperSlide>
+        </Swiper>
+    );
+};
