@@ -58,8 +58,8 @@ export const Footer = () => {
 					<FooterTitle>
 						Kontakt
 					</FooterTitle>
-					<FooterItem icon={ phoneFilledIcon } name={ phone }/>
-					<FooterItem icon={ mailFilledIcon } name={ mail }/>
+					<FooterItem icon={ phoneFilledIcon } name={ phone } link={`tel:${phone}`} />
+					<FooterItem icon={ mailFilledIcon } name={ mail } link={`mailto:${mail}`} />
 					<div className="flex items-center gap-3 mt-2">
 						<Link className="flex text-brown items-center" to="https://www.facebook.com/kalareparz">
 							<FacebookIcon className="h-8 w-8 transition-colors"/>
