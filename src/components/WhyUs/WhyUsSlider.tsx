@@ -20,7 +20,7 @@ export const WhyUsSlider = ({ setActiveSlideIndex }: Props) => {
             if (index >= NumberOfSlides) return "";
             const image = whyUsIndexToSvgDictionary[index as WhyUsTabsIndexes];
             const text = whyUsIndexToTabName[index as WhyUsTabsIndexes];
-            return '<div class="' + swiperClassNames + '">' + image + '<div class="text">' + text + "</div>" + "</div>";
+            return `<div class="${swiperClassNames}">${image}<div class="text">${text}</div></div>`;
         },
         type: "bullets",
         bulletClass: "swiper-custom-bullet",
